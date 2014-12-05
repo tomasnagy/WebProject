@@ -9,7 +9,7 @@
         $scope.layoutDone = function() {
             $timeout(function() {
                 console.log('done');
-                animateAllTheThings();
+                animateAllTheThings($scope.items);
             }, 0);
         }
 

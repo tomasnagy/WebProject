@@ -15,10 +15,10 @@
 
         </figure>
         <section ng-repeat="i in items" repeat-done="layoutDone()">
-            <h1 class="hidden">{{i.title}}</h1>
-            <h2 class="hidden">{{i.date}}</h2>
-            <img class="fullyhidden" ng-src="{{i.image}}" alt="{{i.title}}" title="{{i.title}}"/>
-            <p class="fullyhidden">{{i.description}}</p>
+            <h1>{{i.title}}</h1>
+            <h2>{{i.date}}</h2>
+            <img ng-src="{{i.image}}" alt="{{i.title}}" title="{{i.title}}"/>
+            <p>{{i.description}}</p>
         </section>
     </div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js" type="application/javascript"></script>

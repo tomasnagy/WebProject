@@ -1,3 +1,7 @@
+.active {
+  color: #000000;
+}
+
 body {
   background-color: #c0c0c0;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
@@ -10,7 +14,7 @@ body {
   position: absolute;
   top: 0px;
   left: -2.5%;
-  > p {
+   > p {
     position: absolute;
     text-align: center;
     display: block;
@@ -30,28 +34,29 @@ body {
 section {
   background-color: #fff;
   border-radius: 5px;
-  padding: 1% 3% 1% 3%;
-
   opacity: 0;
+  padding: 1% 3% 1% 3%;
+  width: 30%;
   box-shadow: 5px 5px 10px #888;
   float: left;
   margin: 4%;
-  width: 0;
    > h1, h2 {
      font-weight: normal;
      text-align: center;
+     opacity: 0;
      white-space: nowrap;
      margin: 0;
    }
   > img {
     margin: 0 auto;
+    opacity: 0;
     transform: rotate(45deg);
   }
 }
 
 .hidden {
+  display: block;
   opacity: 0;
-  visibility: hidden;
 }
 
 .show {
@@ -67,7 +72,7 @@ section {
 .openItem {
   width: 30%;
   opacity: 1;
-  height: 450px;
+  height: 420px;
 }
 
 .fullyhidden {
@@ -85,7 +90,8 @@ section {
   opacity: 1;
 }
 
-.active {
-  color: #000;
+.closedItem {
+  width: 0;
+  opacity: 0;
 }
 

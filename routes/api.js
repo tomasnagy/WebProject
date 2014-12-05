@@ -6,10 +6,10 @@ var express = require('express'),
     HistoryItem = require('../data/models/historyItem');
 
 router.get('/allData', function(req, res) {
-    HistoryItem.find({}).exec(function(err, docs) {
+    HistoryItem.getAllItems(function(err, data) {
         console.log(err);
         if(!err)
-            res.json(docs);
+            res.json(data);
     });
 });
 
