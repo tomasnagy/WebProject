@@ -22,7 +22,7 @@
                 console.log(err);
             };
 
-        $http.get('http://localhost:3000/api/allData').then(onDataDownloaded, onError);
+        $http.get('http://' + window.location.hostname + ':3000/api/allData').then(onDataDownloaded, onError);
 
 
     };
