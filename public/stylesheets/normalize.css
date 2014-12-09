@@ -423,3 +423,12 @@ td,
 th {
   padding: 0;
 }
+
+
+/* Custom resets */
+section, p, figure, img {
+    margin: 0;
+    padding:0;
+    content: '';
+    content: none;
+}

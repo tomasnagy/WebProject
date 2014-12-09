@@ -8,7 +8,7 @@ var GuitarHistoryItem = function(title, date, description, image, interactiveGui
     this.description = description;
     this.image = image;
     this.interactiveGuitarName = interactiveGuitarName;
-}
+};
 
 GuitarHistoryItem.prototype = {
     get Title() { return this.title; },
@@ -22,4 +22,4 @@ GuitarHistoryItem.prototype = {
     get Image() { return this.image; },
 
     get InteractiveGuitarName() { return this.interactiveGuitarName; }
-}
+};
