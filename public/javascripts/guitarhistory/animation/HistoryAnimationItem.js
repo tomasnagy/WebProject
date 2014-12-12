@@ -164,5 +164,6 @@ HistoryAnimationItem.prototype = {
         this.i = this.mainData.length - 1;
         this.j = this.extraData.length - 1;
         this.isOpen = false;
+        this.year.className = '';
     }
 };

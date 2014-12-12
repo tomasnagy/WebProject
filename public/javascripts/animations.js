@@ -5,7 +5,7 @@ function animateAllTheThings(data) {
 'use strict';
     var items = [],
         i = data.length - 1,
-        resizeStarted = false;;
+        resizeStarted = false;
 
     // create all items
     for(i; i >= 0; i--) {

@@ -8,14 +8,17 @@ body {
   //overflow-x: hidden;
 }
 
+#container {
+  height: 100%;
+  position: relative;
+}
+
 #background-image {
   width: 100%;
   z-index: -1000;
 
   // chrome windows fix
   overflow: hidden;
-
-  position: absolute;
   top: 0px;
 
   // IE fix
@@ -52,10 +55,22 @@ body {
   }
 }
 
+#guitar-area {
+  position: absolute;
+  top: 100%;
+  > div {
+    width: 100px;
+    float: left;
+    margin: 10px;
+    height: 100px;
+    background: #000;
+  }
+}
+
 section {
   background-color: #fff;
   border-radius: 5px;
-  //opacity: 0;
+  opacity: 0;
   position: absolute;
   padding: 1% 3% 1% 3%;
   width: 30%;
@@ -73,7 +88,7 @@ section {
   > h1, h2 {
     font-weight: normal;
     text-align: center;
-    //opacity: 0;
+    opacity: 0;
     white-space: nowrap;
     margin: 0;
   }
@@ -81,7 +96,7 @@ section {
   > img {
     margin: 0 auto;
     width: 70%;
-    //opacity: 0;
+    opacity: 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
