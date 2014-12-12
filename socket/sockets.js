@@ -32,12 +32,15 @@ module.exports = function(server) {
                 });
             } else {
                 // find rooms with space
-                var i = rooms.length - 1;
-                for(i; i >= 0; i--) {
+                // normal loop to start from beginning & add users to oldest rooms
+                var i = 0,
+                    l = rooms.length;
+                for(i; i < l; i++) {
                     if(rooms[i].users.length < 4) {
                         // user to room
                         rooms[i].users.push(data);
                         socket.join(rooms[i].name);
+                        socket.emit('current room', rooms[i].name);
                         return;
                     }
                 }
@@ -47,13 +50,31 @@ module.exports = function(server) {
                         name: id,
                         users: [data]
                     };
+                    socket.join(room.name);
+                    socket.emit('current room', room.name);
                     rooms.push(room);
                 });
             }
         });
 
+        socket.on('leave room', function(data) {
+            // find room
+            var i = rooms.length - 1;
+            for(i; i >= 0; i--) {
+                if(rooms[i].name === data.name) {
+                    // remove user from room
+                    rooms[i].users.splice(rooms[i].users.indexOf(data.user), 1);
+
+                    // if no users left delete room
+                    if(rooms[i].users.length === 0) {
+                        rooms.splice(i, 1);
+                    }
+                }
+            }
+        });
+
         socket.on('test', function(data) {
-           io.emit('play', data);
+           io.to(data.name).emit('play', data);
           //console.log(data);
         });
     });

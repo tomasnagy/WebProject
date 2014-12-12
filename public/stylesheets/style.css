@@ -37,15 +37,18 @@ body {
     #background-image > p:hover {
       color: #000; }
 
-#guitar-area {
+#stage-container {
   position: absolute;
-  top: 100%; }
-  #guitar-area > div {
+  width: 100%;
+  top: 105%; }
+  #stage-container > div {
     width: 100px;
     float: left;
     margin: 10px;
     height: 100px;
     background: #000; }
+  #stage-container > img {
+    width: 100%; }
 
 section {
   background-color: #fff;

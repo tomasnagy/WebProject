@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 792 463.1" enable-background="new 0 0 792 463.1" xml:space="preserve">
+<filter  id="AI_GaussianBlur_7">
+	<feGaussianBlur  stdDeviation="7"></feGaussianBlur>
+</filter>
+<pattern  x="90" y="-90" width="72" height="72" patternUnits="userSpaceOnUse" id="USGS_7_Vineyard" viewBox="71.5 -72 72 72" overflow="visible">
+	<g>
+		<polygon fill="none" points="71.5,-72 143.5,-72 143.5,0 71.5,0 		"/>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-1.5" x2="144" y2="-1.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-4.5" x2="144" y2="-4.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-7.5" x2="144" y2="-7.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-10.5" x2="144" y2="-10.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-13.5" x2="144" y2="-13.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-16.5" x2="144" y2="-16.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-19.5" x2="144" y2="-19.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-22.5" x2="144" y2="-22.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-25.5" x2="144" y2="-25.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-28.5" x2="144" y2="-28.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-31.5" x2="144" y2="-31.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-34.5" x2="144" y2="-34.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-37.5" x2="144" y2="-37.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-40.5" x2="144" y2="-40.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-43.5" x2="144" y2="-43.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-46.5" x2="144" y2="-46.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-49.5" x2="144" y2="-49.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-52.5" x2="144" y2="-52.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-55.5" x2="144" y2="-55.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-58.5" x2="144" y2="-58.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-61.5" x2="144" y2="-61.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-64.5" x2="144" y2="-64.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-67.5" x2="144" y2="-67.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="72" y1="-70.5" x2="144" y2="-70.5"/>
+		</g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-1.5" x2="72" y2="-1.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-4.5" x2="72" y2="-4.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-7.5" x2="72" y2="-7.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-10.5" x2="72" y2="-10.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-13.5" x2="72" y2="-13.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-16.5" x2="72" y2="-16.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-19.5" x2="72" y2="-19.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-22.5" x2="72" y2="-22.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-25.5" x2="72" y2="-25.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-28.5" x2="72" y2="-28.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-31.5" x2="72" y2="-31.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-34.5" x2="72" y2="-34.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-37.5" x2="72" y2="-37.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-40.5" x2="72" y2="-40.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-43.5" x2="72" y2="-43.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-46.5" x2="72" y2="-46.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-49.5" x2="72" y2="-49.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-52.5" x2="72" y2="-52.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-55.5" x2="72" y2="-55.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-58.5" x2="72" y2="-58.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-61.5" x2="72" y2="-61.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-64.5" x2="72" y2="-64.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-67.5" x2="72" y2="-67.5"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="2,1" x1="0" y1="-70.5" x2="72" y2="-70.5"/>
+		</g>
+	</g>
+</pattern>
+<pattern  x="90" y="-90" width="72" height="74.8" patternUnits="userSpaceOnUse" id="USGS_8_Sewage_Disposal" viewBox="72.2 -74.8 72 74.8" overflow="visible">
+	<g>
+		<polygon fill="none" points="72.2,-74.8 144.2,-74.8 144.2,0 72.2,0 		"/>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-0.8" x2="216.2" y2="-0.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-2.5" x2="216.2" y2="-2.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-4.2" x2="216.2" y2="-4.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-6" x2="216.2" y2="-6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-7.7" x2="216.2" y2="-7.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-9.3" x2="216.2" y2="-9.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-11" x2="216.2" y2="-11"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-12.8" x2="216.2" y2="-12.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-14.5" x2="216.2" y2="-14.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-16.2" x2="216.2" y2="-16.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-17.8" x2="216.2" y2="-17.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-19.5" x2="216.2" y2="-19.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-21.2" x2="216.2" y2="-21.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-22.9" x2="216.2" y2="-22.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-24.6" x2="216.2" y2="-24.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-26.3" x2="216.2" y2="-26.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-28" x2="216.2" y2="-28"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-29.7" x2="216.2" y2="-29.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-31.4" x2="216.2" y2="-31.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-33.1" x2="216.2" y2="-33.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-34.8" x2="216.2" y2="-34.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-36.5" x2="216.2" y2="-36.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-38.2" x2="216.2" y2="-38.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-39.9" x2="216.2" y2="-39.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-41.6" x2="216.2" y2="-41.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-43.3" x2="216.2" y2="-43.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-45" x2="216.2" y2="-45"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-46.7" x2="216.2" y2="-46.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-48.4" x2="216.2" y2="-48.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-50.1" x2="216.2" y2="-50.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-51.8" x2="216.2" y2="-51.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-53.5" x2="216.2" y2="-53.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-55.2" x2="216.2" y2="-55.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-56.9" x2="216.2" y2="-56.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-58.6" x2="216.2" y2="-58.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-60.3" x2="216.2" y2="-60.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-62" x2="216.2" y2="-62"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-63.7" x2="216.2" y2="-63.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-65.4" x2="216.2" y2="-65.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-67.1" x2="216.2" y2="-67.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-68.8" x2="216.2" y2="-68.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-70.5" x2="216.2" y2="-70.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-72.2" x2="216.2" y2="-72.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="144.2" y1="-73.9" x2="216.2" y2="-73.9"/>
+		</g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-0.8" x2="144.2" y2="-0.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-2.5" x2="144.2" y2="-2.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-4.2" x2="144.2" y2="-4.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-6" x2="144.2" y2="-6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-7.7" x2="144.2" y2="-7.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-9.3" x2="144.2" y2="-9.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-11" x2="144.2" y2="-11"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-12.8" x2="144.2" y2="-12.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-14.5" x2="144.2" y2="-14.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-16.2" x2="144.2" y2="-16.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-17.8" x2="144.2" y2="-17.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-19.5" x2="144.2" y2="-19.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-21.2" x2="144.2" y2="-21.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-22.9" x2="144.2" y2="-22.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-24.6" x2="144.2" y2="-24.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-26.3" x2="144.2" y2="-26.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-28" x2="144.2" y2="-28"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-29.7" x2="144.2" y2="-29.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-31.4" x2="144.2" y2="-31.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-33.1" x2="144.2" y2="-33.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-34.8" x2="144.2" y2="-34.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-36.5" x2="144.2" y2="-36.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-38.2" x2="144.2" y2="-38.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-39.9" x2="144.2" y2="-39.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-41.6" x2="144.2" y2="-41.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-43.3" x2="144.2" y2="-43.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-45" x2="144.2" y2="-45"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-46.7" x2="144.2" y2="-46.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-48.4" x2="144.2" y2="-48.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-50.1" x2="144.2" y2="-50.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-51.8" x2="144.2" y2="-51.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-53.5" x2="144.2" y2="-53.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-55.2" x2="144.2" y2="-55.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-56.9" x2="144.2" y2="-56.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-58.6" x2="144.2" y2="-58.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-60.3" x2="144.2" y2="-60.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-62" x2="144.2" y2="-62"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-63.7" x2="144.2" y2="-63.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-65.4" x2="144.2" y2="-65.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-67.1" x2="144.2" y2="-67.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-68.8" x2="144.2" y2="-68.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-70.5" x2="144.2" y2="-70.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-72.2" x2="144.2" y2="-72.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="72.2" y1="-73.9" x2="144.2" y2="-73.9"/>
+		</g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-0.8" x2="72.2" y2="-0.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-2.5" x2="72.2" y2="-2.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-4.2" x2="72.2" y2="-4.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-6" x2="72.2" y2="-6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-7.7" x2="72.2" y2="-7.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-9.3" x2="72.2" y2="-9.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-11" x2="72.2" y2="-11"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-12.8" x2="72.2" y2="-12.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-14.5" x2="72.2" y2="-14.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-16.2" x2="72.2" y2="-16.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-17.8" x2="72.2" y2="-17.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-19.5" x2="72.2" y2="-19.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-21.2" x2="72.2" y2="-21.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-22.9" x2="72.2" y2="-22.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-24.6" x2="72.2" y2="-24.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-26.3" x2="72.2" y2="-26.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-28" x2="72.2" y2="-28"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-29.7" x2="72.2" y2="-29.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-31.4" x2="72.2" y2="-31.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-33.1" x2="72.2" y2="-33.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-34.8" x2="72.2" y2="-34.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-36.5" x2="72.2" y2="-36.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-38.2" x2="72.2" y2="-38.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-39.9" x2="72.2" y2="-39.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-41.6" x2="72.2" y2="-41.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-43.3" x2="72.2" y2="-43.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-45" x2="72.2" y2="-45"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-46.7" x2="72.2" y2="-46.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-48.4" x2="72.2" y2="-48.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-50.1" x2="72.2" y2="-50.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-51.8" x2="72.2" y2="-51.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-53.5" x2="72.2" y2="-53.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-55.2" x2="72.2" y2="-55.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-56.9" x2="72.2" y2="-56.9"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-58.6" x2="72.2" y2="-58.6"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-60.3" x2="72.2" y2="-60.3"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-62" x2="72.2" y2="-62"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-63.7" x2="72.2" y2="-63.7"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-65.4" x2="72.2" y2="-65.4"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-67.1" x2="72.2" y2="-67.1"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-68.8" x2="72.2" y2="-68.8"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-70.5" x2="72.2" y2="-70.5"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-72.2" x2="72.2" y2="-72.2"/>
+			<line fill="none" stroke="#000000" stroke-width="0.3" stroke-linecap="square" x1="0.2" y1="-73.9" x2="72.2" y2="-73.9"/>
+		</g>
+	</g>
+</pattern>
+<g id="background">
+	<rect y="-1" fill="#BCBEC0" width="792" height="463.1"/>
+</g>
+<g id="floor">
+	<rect y="294.1" fill="#603913" width="792" height="169"/>
+	<rect y="294.1" fill="url(#USGS_8_Sewage_Disposal)" width="792" height="169"/>
+</g>
+<g id="spacer">
+	<rect y="284.3" fill="#3C2415" width="792" height="9.8"/>
+	<rect x="-44.3" y="153.7" fill="#3C2415" width="0.7" height="2"/>
+</g>
+<g id="spots" filter="url(#AI_GaussianBlur_7)">
+	<polygon opacity="0.24" fill="#F1F2F2" points="442.7,369 270,369 91.3,-124.3 	"/>
+	<polygon opacity="0.24" fill="#F1F2F2" points="350.3,369 523,369 701.7,-124.3 	"/>
+	<ellipse fill="#F1F2F2" cx="436.5" cy="369.7" rx="86.2" ry="20"/>
+	<ellipse fill="#F1F2F2" cx="356.5" cy="369.7" rx="86.2" ry="20"/>
+</g>
+<g id="box">
+	<path fill="#414042" d="M84.5,322.3H18.3c-3.1,0-5.7-2.6-5.7-5.7v-82.8c0-3.1,2.5-5.7,5.7-5.7h66.2c3.1,0,5.7,2.6,5.7,5.7v82.8
+		C90.2,319.8,87.7,322.3,84.5,322.3z"/>
+	<path fill="#8B5E3C" d="M81.5,318.6H21.3c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.6-5.7,5.7-5.7h60.2c3.1,0,5.7,2.6,5.7,5.7V313
+		C87.2,316.1,84.7,318.6,81.5,318.6z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M81.5,318.6H21.3c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.6-5.7,5.7-5.7h60.2
+		c3.1,0,5.7,2.6,5.7,5.7V313C87.2,316.1,84.7,318.6,81.5,318.6z"/>
+	<path fill="#414042" d="M168.3,322.3h-66.2c-3.1,0-5.7-2.6-5.7-5.7v-82.8c0-3.1,2.6-5.7,5.7-5.7h66.2c3.1,0,5.7,2.6,5.7,5.7v82.8
+		C174,319.8,171.4,322.3,168.3,322.3z"/>
+	<path fill="#8B5E3C" d="M165.3,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.6-5.7,5.7-5.7h60.2c3.1,0,5.7,2.6,5.7,5.7V313
+		C171,316.1,168.4,318.6,165.3,318.6z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M165.3,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.6-5.7,5.7-5.7h60.2
+		c3.1,0,5.7,2.6,5.7,5.7V313C171,316.1,168.4,318.6,165.3,318.6z"/>
+	<path fill="#414042" d="M773.9,322.3h-66.2c-3.1,0-5.7-2.6-5.7-5.7v-82.8c0-3.1,2.5-5.7,5.7-5.7h66.2c3.1,0,5.7,2.6,5.7,5.7v82.8
+		C779.6,319.8,777,322.3,773.9,322.3z"/>
+	<path fill="#8B5E3C" d="M770.9,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.5-5.7,5.7-5.7h60.2c3.1,0,5.7,2.6,5.7,5.7V313
+		C776.6,316.1,774,318.6,770.9,318.6z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M770.9,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.5-5.7,5.7-5.7h60.2
+		c3.1,0,5.7,2.6,5.7,5.7V313C776.6,316.1,774,318.6,770.9,318.6z"/>
+	<path fill="#414042" d="M691.5,322.3h-66.2c-3.1,0-5.7-2.6-5.7-5.7v-82.8c0-3.1,2.5-5.7,5.7-5.7h66.2c3.1,0,5.7,2.6,5.7,5.7v82.8
+		C697.2,319.8,694.7,322.3,691.5,322.3z"/>
+	<path fill="#8B5E3C" d="M688.5,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.5-5.7,5.7-5.7h60.2c3.1,0,5.7,2.6,5.7,5.7V313
+		C694.2,316.1,691.7,318.6,688.5,318.6z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M688.5,318.6h-60.2c-3.1,0-5.7-2.5-5.7-5.7v-75.4c0-3.1,2.5-5.7,5.7-5.7h60.2
+		c3.1,0,5.7,2.6,5.7,5.7V313C694.2,316.1,691.7,318.6,688.5,318.6z"/>
+</g>
+<g id="head">
+	<path fill="#414042" d="M80.8,226.9H22.6c-2.2,0-3.9-1.8-3.9-3.9v-15.2c0-2.2,1.8-3.9,3.9-3.9h58.2c2.2,0,3.9,1.8,3.9,3.9V223
+		C84.7,225.2,82.9,226.9,80.8,226.9z"/>
+	<path fill="#754C29" d="M81.4,219.3H22.1c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C82.5,218.8,82,219.3,81.4,219.3z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M81.4,219.3H22.1c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C82.5,218.8,82,219.3,81.4,219.3z"/>
+	<path fill="#939598" d="M81.2,224.1H22.3c-0.7,0-1.2-0.6-1.2-1.2v-1.2c0-0.7,0.6-1.2,1.2-1.2h58.9c0.7,0,1.2,0.6,1.2,1.2v1.2
+		C82.5,223.6,81.9,224.1,81.2,224.1z"/>
+	<rect x="24.7" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<rect x="75.2" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="25.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="29.1" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="32.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="36" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="39.5" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="43" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="46.4" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="49.9" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="53.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="56.8" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="60.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="63.7" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="67.2" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="70.6" cy="222.4" r="1"/>
+	<circle fill="#ED1C24" cx="80.2" cy="222.2" r="0.8"/>
+	<path fill="#414042" d="M164.5,226.9h-58.2c-2.2,0-3.9-1.8-3.9-3.9v-15.2c0-2.2,1.8-3.9,3.9-3.9h58.2c2.2,0,3.9,1.8,3.9,3.9V223
+		C168.4,225.2,166.7,226.9,164.5,226.9z"/>
+	<path fill="#754C29" d="M165.2,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C166.2,218.8,165.8,219.3,165.2,219.3z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M165.2,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C166.2,218.8,165.8,219.3,165.2,219.3z"/>
+	<path fill="#939598" d="M165,224.1h-58.9c-0.7,0-1.2-0.6-1.2-1.2v-1.2c0-0.7,0.6-1.2,1.2-1.2H165c0.7,0,1.2,0.6,1.2,1.2v1.2
+		C166.2,223.6,165.7,224.1,165,224.1z"/>
+	<rect x="108.4" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<rect x="159" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="109.4" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="112.9" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="116.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="119.8" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="123.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="126.7" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="130.2" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="133.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="137.1" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="140.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="144" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="147.5" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="151" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="154.4" cy="222.4" r="1"/>
+	<circle fill="#ED1C24" cx="164" cy="222.2" r="0.8"/>
+	<path fill="#414042" d="M770.1,226.9H712c-2.2,0-3.9-1.8-3.9-3.9v-15.2c0-2.2,1.8-3.9,3.9-3.9h58.2c2.2,0,3.9,1.8,3.9,3.9V223
+		C774.1,225.2,772.3,226.9,770.1,226.9z"/>
+	<path fill="#754C29" d="M770.8,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C771.9,218.8,771.4,219.3,770.8,219.3z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M770.8,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C771.9,218.8,771.4,219.3,770.8,219.3z"/>
+	<path fill="#939598" d="M770.6,224.1h-58.9c-0.7,0-1.2-0.6-1.2-1.2v-1.2c0-0.7,0.6-1.2,1.2-1.2h58.9c0.7,0,1.2,0.6,1.2,1.2v1.2
+		C771.9,223.6,771.3,224.1,770.6,224.1z"/>
+	<rect x="714.1" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<rect x="764.6" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="715" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="718.5" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="722" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="725.4" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="728.9" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="732.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="735.8" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="739.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="742.7" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="746.2" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="749.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="753.1" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="756.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="760" cy="222.4" r="1"/>
+	<circle fill="#ED1C24" cx="769.6" cy="222.2" r="0.8"/>
+	<path fill="#414042" d="M687.8,226.9h-58.2c-2.2,0-3.9-1.8-3.9-3.9v-15.2c0-2.2,1.8-3.9,3.9-3.9h58.2c2.2,0,3.9,1.8,3.9,3.9V223
+		C691.7,225.2,689.9,226.9,687.8,226.9z"/>
+	<path fill="#754C29" d="M688.4,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C689.5,218.8,689,219.3,688.4,219.3z"/>
+	<path fill="url(#USGS_7_Vineyard)" d="M688.4,219.3h-59.3c-0.6,0-1-0.5-1-1v-11.7c0-0.6,0.5-1,1-1h59.3c0.6,0,1,0.5,1,1v11.7
+		C689.5,218.8,689,219.3,688.4,219.3z"/>
+	<path fill="#939598" d="M688.2,224.1h-58.9c-0.7,0-1.2-0.6-1.2-1.2v-1.2c0-0.7,0.6-1.2,1.2-1.2h58.9c0.7,0,1.2,0.6,1.2,1.2v1.2
+		C689.5,223.6,688.9,224.1,688.2,224.1z"/>
+	<rect x="631.7" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<rect x="682.2" y="226.2" fill="#414042" width="2.5" height="2"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="632.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="636.1" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="639.6" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="643" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="646.5" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="650" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="653.4" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="656.9" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="660.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="663.8" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="667.3" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="670.7" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="674.2" cy="222.4" r="1"/>
+	<circle fill="#BCBEC0" stroke="#000000" stroke-width="0.25" cx="677.6" cy="222.4" r="1"/>
+	<circle fill="#ED1C24" cx="687.2" cy="222.2" r="0.8"/>
+</g>
+</svg>

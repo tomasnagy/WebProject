@@ -20,6 +20,12 @@
         })
     });
 
+    // close browser -> leave room
+    window.addEventListener('beforeunload', function() {
+        socket.emit('leave room', { name: roomName, user: id});
+        return null;
+    });
+
 
     // if initializeDefaultPlugins returns false, we cannot play sound in this browser
     if (!createjs.Sound.initializeDefaultPlugins()) {return;}
@@ -39,7 +45,7 @@
 
     var element1 = document.getElementById("guitar1");
     element1.addEventListener('mouseenter', function() {
-        socket.emit('test', 'Chord1');
+        socket.emit('test', {name: roomName, user: id, chord:'Chord1'});
         createjs.Sound.stop('Chord2');
         createjs.Sound.stop('Chord3');
         createjs.Sound.stop('Chord4');
@@ -68,6 +74,8 @@
     });
 
     socket.on('play', function(data) {
-        createjs.Sound.play(data);
+        if(data.user !== id) {
+            createjs.Sound.play(data.chord);
+        }
     })
 })();
