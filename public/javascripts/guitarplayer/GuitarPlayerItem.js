@@ -74,6 +74,8 @@ var GuitarPlayerItem = function(selectedGuitar, isSupportGuitar) {
 };
 
 GuitarPlayerItem.prototype = {
+    get Name() {return this.name; },
+
     get Chord1() { return this.selectedGuitar + 'Chord1'; },
     get Chord2() { return this.selectedGuitar + 'Chord2'; },
     get Chord3() { return this.selectedGuitar + 'Chord3'; },
@@ -84,9 +86,9 @@ GuitarPlayerItem.prototype = {
         if (this.chord1 === undefined) {
             this.chord1 = createjs.Sound.play(this.selectedGuitar + 'Chord1');
 
-            if(this.isSupportGuitar) {
-                this.chord1.setVolume(0.5);
-            }
+            //if(this.isSupportGuitar) {
+            //    this.chord1.setVolume(0.5);
+            //}
 
         } else {
             this.chord1.stop();
@@ -98,9 +100,9 @@ GuitarPlayerItem.prototype = {
         if (this.chord2 === undefined) {
             this.chord2 = createjs.Sound.play(this.selectedGuitar + 'Chord2');
 
-            if(this.isSupportGuitar) {
-                this.chord2.setVolume(0.5);
-            }
+            //if(this.isSupportGuitar) {
+            //    this.chord2.setVolume(0.5);
+            //}
 
         } else {
             this.chord2.stop();
@@ -112,9 +114,9 @@ GuitarPlayerItem.prototype = {
         if (this.chord3 === undefined) {
             this.chord3 = createjs.Sound.play(this.selectedGuitar + 'Chord3');
 
-            if(this.isSupportGuitar) {
-                this.chord1.setVolume(0.5);
-            }
+            //if(this.isSupportGuitar) {
+            //    this.chord1.setVolume(0.5);
+            //}
 
         } else {
             this.chord3.stop();
@@ -126,9 +128,9 @@ GuitarPlayerItem.prototype = {
         if (this.chord4 === undefined) {
             this.chord4 = createjs.Sound.play(this.selectedGuitar + 'Chord4');
 
-            if(this.isSupportGuitar) {
-                this.chord1.setVolume(0.5);
-            }
+            //if(this.isSupportGuitar) {
+            //    this.chord1.setVolume(0.5);
+            //}
 
         } else {
             this.chord4.stop();

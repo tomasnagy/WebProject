@@ -42,13 +42,13 @@ module.exports = function(server) {
                     if(rooms[i].Users.length < 4) {
                         // user to room
                         rooms[i].addUser(new User(data));
+                        socket.join(rooms[i].Name);
 
                         // get users after join to get updated user object
                         var user = rooms[i].getUserById(data);
 
                         socket.emit('current room', { room: rooms[i], user: user });
                         io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
-                        socket.join(rooms[i].Name);
                         emptyFound = true;
                         break;
                     }
@@ -88,8 +88,7 @@ module.exports = function(server) {
         });
 
         socket.on('send chord to server', function(data) {
-           io.to(data.roomName).emit('play chord', data.chord);
-          //console.log(data);
+           io.to(data.roomName).emit('play chord', {user: data.user, chord: data.chord});
         });
     });
 };

@@ -6,7 +6,13 @@
     var socket = io.connect(),
         id,
         room,
-        user;
+        user,
+        supportguitars = [],
+        playChordHandler = function(data) {
+            if(data.user.name !== user.name) {
+                playChordFromSupportGuitar(data.user, data.chord, supportguitars);
+            }
+        };
 
     // request a key
     socket.emit('requestkey');
@@ -21,15 +27,20 @@
             user = data.user;
 
             // load appropriate guitar
-            loadGuitar(user, room.name);
+            loadGuitar(socket, user, room.name);
 
             // show guitars from other users
             showBackgroundGuitars(room.users, user.name);
 
+            // load guitar sounds once
+            supportguitars = loadSupportGuitarsSound(user.guitar);
+
+            socket.on('play chord', playChordHandler);
+
             socket.on('user count changed', function(data) {
                 // redraw support guitars when new user joins or an existing user leaves
                 showBackgroundGuitars(data, user.name);
-            });
+           });
         })
     });
 
@@ -40,52 +51,17 @@
     });
 
 
-
-    //var element1 = document.getElementById("guitar1");
-    //element1.addEventListener('mouseenter', function() {
-    //    socket.emit('test', {name: roomName, user: id, chord:'Chord1'});
-    //    createjs.Sound.stop('Chord2');
-    //    createjs.Sound.stop('Chord3');
-    //    createjs.Sound.stop('Chord4');
-    //    createjs.Sound.play('Chord1');
-    //});
-    //var element2 = document.getElementById("guitar2");
-    //element2.addEventListener('mouseenter', function() {
-    //    createjs.Sound.stop('Chord1');
-    //    createjs.Sound.stop('Chord3');
-    //    createjs.Sound.stop('Chord4');
-    //    createjs.Sound.play('Chord2');
-    //});
-    //var element3 = document.getElementById("guitar3");
-    //element3.addEventListener('mouseenter', function() {
-    //    createjs.Sound.stop('Chord1');
-    //    createjs.Sound.stop('Chord2');
-    //    createjs.Sound.stop('Chord4');
-    //    createjs.Sound.play('Chord3');
-    //});
-    //var element4 = document.getElementById("guitar4");
-    //element4.addEventListener('mouseenter', function() {
-    //    createjs.Sound.stop('Chord1');
-    //    createjs.Sound.stop('Chord2');
-    //    createjs.Sound.stop('Chord3');
-    //    createjs.Sound.play('Chord4');
-    //});
-
-    socket.on('play', function(data) {
-        if(data.user !== id) {
-            createjs.Sound.play(data.chord);
-        }
-    })
 })();
 
-function loadGuitar(user, roomName) {
+
+
+function loadGuitar(socket, user, roomName) {
     var guitarItem = new GuitarPlayerItem(user.guitar, false),
         chord1 = document.getElementById('chord1'),
         chord2 = document.getElementById('chord2'),
         chord3 = document.getElementById('chord3'),
         chord4 = document.getElementById('chord4'),
-        guitarImage = document.querySelector('#stage-container > figure > img'),
-        socket = io.connect();
+        guitarImage = document.querySelector('#stage-container > figure > img');
 
     // load guitar
     guitarImage.src = "/images/guitars/" + user.guitar +".svg";
@@ -93,22 +69,22 @@ function loadGuitar(user, roomName) {
     // add handlers
     chord1.addEventListener('mouseenter', function() {
         guitarItem.playChord1();
-        socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 1 } );
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
     });
 
     chord2.addEventListener('mouseenter', function() {
         guitarItem.playChord2();
-        socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 2 } );
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
     });
 
     chord3.addEventListener('mouseenter', function() {
         guitarItem.playChord3();
-        socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 3 } );
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
     });
 
     chord4.addEventListener('mouseenter', function() {
         guitarItem.playChord4();
-        socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 4 } );
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
     });
 
     // keyhandlers
@@ -116,31 +92,26 @@ function loadGuitar(user, roomName) {
         switch(e.keyCode) {
             case 65:
                 guitarItem.playChord1();
-                socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 1 } );
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 81:
                 // azerty
                 guitarItem.playChord1();
-                socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 1 } );
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 83:
                 guitarItem.playChord2();
-                socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 2 } );
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
                 break;
             case 68:
                 guitarItem.playChord3();
-                socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 3 } );
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
                 break;
             case 70:
                 guitarItem.playChord4();
-                socket.emit('send chord to server', { roomName: roomName, userName: user.name, chord: 4 } );
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
                 break;
         }
-    });
-
-    // play chord from other sockets
-    socket.on('play chord', function(data) {
-        guitarItem.playChord(data);
     });
 }
 
@@ -166,4 +137,47 @@ function showBackgroundGuitars(users, currentUser) {
     }
 
     supportGuitarContainer.innerHTML = htmlBuilder;
+}
+
+function loadSupportGuitarsSound(currentGuitar) {
+    var supportguitars = ['cheap', 'heartBroken', 'practiceSpace', 'woollyOctave'],
+        i = supportguitars.length - 1,
+        item,
+        supportGuitarItem,
+        result = [];
+
+    for(i; i >= 0; i--) {
+        item = supportguitars[i];
+        if(item !== currentGuitar) {
+            supportGuitarItem = new GuitarPlayerItem(item, true);
+            result.push(supportGuitarItem);
+        }
+    }
+
+    return result;
+}
+
+function playChordFromSupportGuitar(user, chord, supportguitars) {
+    var i = supportguitars.length - 1,
+        guitarItem;
+
+    for(i; i >= 0; i--) {
+        guitarItem = supportguitars[i];
+        if(guitarItem.selectedGuitar === user.guitar) {
+            switch(chord) {
+                case 1:
+                    guitarItem.playChord1();
+                    break;
+                case 2:
+                    guitarItem.playChord2();
+                    break;
+                case 3:
+                    guitarItem.playChord3();
+                    break;
+                case 4:
+                    guitarItem.playChord4();
+                    break;
+            }
+        }
+    }
 }
