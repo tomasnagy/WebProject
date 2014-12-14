@@ -5,23 +5,35 @@
     <link rel="stylesheet" href="/stylesheets/normalize.css"/>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
-<body ng-app="app">
+<body data-ng-app="app">
         <!--background will be absolute, background forces height-->
-    <div id="container" ng-controller="HistoryItemController">
+    <div id="container" data-ng-controller="HistoryItemController">
         <figure id="background-image">
             <img src="/images/bg.svg" alt="background" title="background"/>
 
-            <p class="year" ng-repeat="i in items">{{i.year}}</p>
+            <p class="year" data-ng-repeat="i in items">{{i.year}}</p>
 
-            <section ng-repeat="i in items" repeat-done="layoutDone()">
-                <h1>{{i.title}}</h1>
-                <h2>{{i.date}}</h2>
-                <img alt="{{i.title}}" title="{{i.title}}"/>
-                <p>{{i.description}}</p>
+            <section data-ng-repeat="i in items" repeat-done="layoutDone()">
+                <h1 data-ng-bind="i.title"></h1>
+                <h2 data-ng-bind="i.date"></h2>
+                <img alt="{{i.title}}"/>
+                <p data-ng-bind="i.description"></p>
             </section>
         </figure>
         <div id="stage-container">
             <img src="/images/stage.svg" alt="stage" title="stage"/>
+            <figure>
+                <img src="" alt=""/>
+                <div id="chord1"></div>
+                <div id="chord2"></div>
+                <div id="chord3"></div>
+                <div id="chord4"></div>
+            </figure>
+            <div id="support-guitars">
+                <!--<img src="images/guitars/cheap.svg" alt="cheap"/>-->
+                <!--<img src="images/guitars/heartBroken.svg" alt="cheap"/>-->
+                <!--<img src="images/guitars/practiceSpace.svg" alt="cheap"/>-->
+            </div>
         </div>
     </div>
     <!--CDN Scripts-->

@@ -5,7 +5,7 @@
 body {
   background-color: #c0c0c0;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #container {
@@ -59,15 +59,65 @@ body {
   position: absolute;
   width: 100%;
   top: 105%;
+  overflow: hidden;
   > div {
-    width: 100px;
-    float: left;
-    margin: 10px;
-    height: 100px;
-    background: #000;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 15%;
+    > img {
+      margin: 35% 14% 0 0;
+      -webkit-transform: rotate(45deg);
+      width: 15%;
+      float: left;
+      &:nth-child(even) {
+        margin-top: 25%;
+      }
+    }
   }
   > img {
     width: 100%;
+  }
+  > figure {
+    z-index: 101;
+    width: 30%;
+    height: auto;
+    position: absolute;
+    left: 40%;
+    top: 44%;
+    transform: rotate(70deg);
+    -webkit-transform: rotate(70deg);
+
+    > img {
+      // IE fix
+      width: 100%;
+    }
+
+    > div {
+      position: absolute;
+      top: 22%;
+      left: 40.5%;
+      width: 5%;
+      height: 6%;
+      background-color: #f00;
+
+      &#chord2 {
+        top: 30%;
+        background-color: #0f0;
+      }
+
+      &#chord3 {
+        top: 38%;
+        background-color: #00f;
+      }
+
+      &#chord4 {
+        top: 46%;
+        background-color: #ff0;
+      }
+    }
   }
 }
 

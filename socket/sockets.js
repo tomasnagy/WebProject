@@ -4,6 +4,8 @@
 module.exports = function(server) {
     var io = require('socket.io').listen(server),
         generator = require('../util/randomgenerator'),
+        Room = require('../models/Room'),
+        User = require('../models/User'),
         rooms = [];
 
     console.log('start socket');
@@ -21,39 +23,49 @@ module.exports = function(server) {
 
                 // create firstroom
                 generator.getRandomID(5, function(id) {
-                    var room = {
-                        name: id,
-                        users: [data]
-                    };
+                    room = new Room(id);
+                    room.addUser(new User(data));
                     rooms.push(room);
-                    socket.join(room.name);
-                    socket.emit('current room', room.name);
-                    console.log('Joined room: ' + rooms.length);
+                    socket.join(room.Name);
+
+                    var user = room.getUserById(data);
+
+                    socket.emit('current room', {room: room, user: user });
                 });
             } else {
                 // find rooms with space
                 // normal loop to start from beginning & add users to oldest rooms
                 var i = 0,
-                    l = rooms.length;
+                    l = rooms.length,
+                    emptyFound = false;
                 for(i; i < l; i++) {
-                    if(rooms[i].users.length < 4) {
+                    if(rooms[i].Users.length < 4) {
                         // user to room
-                        rooms[i].users.push(data);
-                        socket.join(rooms[i].name);
-                        socket.emit('current room', rooms[i].name);
-                        return;
+                        rooms[i].addUser(new User(data));
+
+                        // get users after join to get updated user object
+                        var user = rooms[i].getUserById(data);
+
+                        socket.emit('current room', { room: rooms[i], user: user });
+                        io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
+                        socket.join(rooms[i].Name);
+                        emptyFound = true;
+                        break;
                     }
                 }
-                // no space found create new room
-                generator.getRandomID(5, function(id) {
-                    var room = {
-                        name: id,
-                        users: [data]
-                    };
-                    socket.join(room.name);
-                    socket.emit('current room', room.name);
-                    rooms.push(room);
-                });
+
+                if(emptyFound === false) {
+                    // no space found create new room
+                    generator.getRandomID(5, function(id) {
+                        var room = new Room(id);
+                        room.addUser(new User(data));
+                        socket.join(room.Name);
+
+                        var user = room.getUserById(data);
+                        socket.emit('current room', { room: room, user: user });
+                        rooms.push(room);
+                    });
+                }
             }
         });
 
@@ -61,20 +73,22 @@ module.exports = function(server) {
             // find room
             var i = rooms.length - 1;
             for(i; i >= 0; i--) {
-                if(rooms[i].name === data.name) {
+                if(rooms[i].Name === data.name) {
                     // remove user from room
-                    rooms[i].users.splice(rooms[i].users.indexOf(data.user), 1);
+                    rooms[i].removeUser(rooms[i].getUserById(data.user.name));
 
                     // if no users left delete room
-                    if(rooms[i].users.length === 0) {
+                    if(rooms[i].Users.length === 0) {
                         rooms.splice(i, 1);
+                    } else {
+                        io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
                     }
                 }
             }
         });
 
-        socket.on('test', function(data) {
-           io.to(data.name).emit('play', data);
+        socket.on('send chord to server', function(data) {
+           io.to(data.roomName).emit('play chord', data.chord);
           //console.log(data);
         });
     });
