@@ -52,6 +52,7 @@ body {
     padding: 0 0 0 15%; }
     #stage-container > div > img {
       margin: 35% 14% 0 0;
+      transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
       width: 15%;
       float: left; }

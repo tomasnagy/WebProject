@@ -248,11 +248,19 @@ function playChordFromSupportGuitar(user, chord, supportguitars) {
 
 function shakeRightGuitar(name) {
     var guitarToShake = document.getElementById(name),
-        shakeTween = function(item, repeatCount){
-        TweenMax.to(item,0.1,{repeat:repeatCount-1, x:-4, delay: 0.1}).to(item, 0.1, {repeat:repeatCount-1, x: +4, delay: 0.1});
-        TweenMax.to(item,0.1,{y:0, x:0, delay:(repeatCount+1) * 0.1});
+        count = 0,
+        shakeTween = function(item){
+        TweenMax.to(item,0.05,{rotation: 46})
+        TweenMax.to(item, 0.05, {rotation: 44, delay: 0.05});
+        if(count < 50) {
+            setTimeout(function () {
+                shakeTween(item);
+                count++;
+            }, 100);
+        } else {
+            TweenMax.to(item,0.1,{rotation: 45, delay: 0.1});
+        }
     };
 
-    // recursive!!!
-    shakeTween(guitarToShake, 60);
+    shakeTween(guitarToShake);
 }
