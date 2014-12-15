@@ -49,7 +49,10 @@ function GuitarPlayerController() {
 
     // close browser -> leave room
     window.addEventListener('beforeunload', function() {
-        socket.emit('leave room', { name: room.name, user: user});
+        // check if user has joined room, then leave room, else do nothing
+        if(room !== undefined) {
+            socket.emit('leave room', {name: room.name, user: user});
+        }
        // return null;
     });
 
