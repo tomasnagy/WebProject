@@ -22,37 +22,39 @@ function GuitarPlayerController() {
         // save id + join room
         id = data;
         console.log(id);
-        socket.emit('join room', data);
-        socket.on('current room', function(data) {
-            room = data.room;
-            user = data.user;
+        getLocation(function(location) {
+            socket.emit('join room', {key: data, location: location});
+            socket.on('current room', function(data) {
+                room = data.room;
+                user = data.user;
 
-            // load appropriate guitar
-            loadGuitar(socket, user, room.name);
+                // load appropriate guitar
+                loadGuitar(socket, user, room.name);
 
-            // show guitars from other users
-            showBackgroundGuitars(room.users, user.name);
+                // show guitars from other users
+                showBackgroundGuitars(room.users, user.name);
 
-            // load guitar sounds once
-            supportguitars = loadSupportGuitarsSound(user.guitar);
+                // load guitar sounds once
+                supportguitars = loadSupportGuitarsSound(user.guitar);
 
-            socket.on('play chord', playChordHandler);
+                socket.on('play chord', playChordHandler);
 
-            socket.on('user count changed', function(data) {
-                // redraw support guitars when new user joins or an existing user leaves
-                showBackgroundGuitars(data, user.name);
-           });
-        })
+                socket.on('user count changed', function(data) {
+                    // redraw support guitars when new user joins or an existing user leaves
+                    showBackgroundGuitars(data, user.name);
+               });
+            });
+        });
     });
 
     // close browser -> leave room
     window.addEventListener('beforeunload', function() {
         socket.emit('leave room', { name: room.name, user: user});
-        return null;
+       // return null;
     });
 
 
-};
+}
 
 
 
@@ -184,18 +186,31 @@ function showBackgroundGuitars(users, currentUser) {
         htmlBuilder = '',
         supportGuitar = '',
         item,
-        supportGuitarContainer = document.getElementById('support-guitars');
+        supportGuitarContainer = document.getElementById('support-guitars'),
+        formatLocation = function(location) {
+            var result = '';
+            if(location.length > 17) {
+                result = location.substring(0, 17);
+                result += "..."
+                return result.trim();
+            } else {
+                return location.trim();
+            }
+        };
 
     for(i; i >= 0; i--) {
         item = users[i];
         if(item.name !== currentUser) {
-            supportGuitar = '<img id="';
+            supportGuitar = '<figure class="support-guitar" id="';
             supportGuitar += item.name;
-            supportGuitar += '" src="/images/guitars/';
+            supportGuitar += '"> <img src="/images/guitars/';
             supportGuitar += item.guitar;
             supportGuitar += '.svg" alt="';
             supportGuitar += item.guitar;
             supportGuitar += '" />';
+            supportGuitar += '<figcaption>';
+            supportGuitar += formatLocation(item.location);
+            supportGuitar += '</figcaption></figure>';
             htmlBuilder += supportGuitar;
         }
     }
@@ -250,7 +265,7 @@ function shakeRightGuitar(name) {
     var guitarToShake = document.getElementById(name),
         count = 0,
         shakeTween = function(item){
-        TweenMax.to(item,0.05,{rotation: 46})
+        TweenMax.to(item,0.05,{rotation: 46});
         TweenMax.to(item, 0.05, {rotation: 44, delay: 0.05});
         if(count < 50) {
             setTimeout(function () {

@@ -8,10 +8,10 @@ var GuitarPlayerItem = function(selectedGuitar, isSupportGuitar) {
 
     this.selectedGuitar = selectedGuitar;
     this.isSupportGuitar = isSupportGuitar;
-    this.chord1;
-    this.chord2;
-    this.chord3;
-    this.chord4;
+    this.chord1 = undefined;
+    this.chord2 = undefined;
+    this.chord3 = undefined;
+    this.chord4 = undefined;
 
     if (!createjs.Sound.initializeDefaultPlugins()) {return;}
 

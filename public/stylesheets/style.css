@@ -50,13 +50,28 @@ body {
     top: 0;
     left: 0;
     padding: 0 0 0 15%; }
-    #stage-container > div > img {
+    #stage-container > div > figure.support-guitar {
       margin: 35% 14% 0 0;
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
       width: 15%;
-      float: left; }
-      #stage-container > div > img:nth-child(even) {
+      float: left;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg); }
+      #stage-container > div > figure.support-guitar > img {
+        width: 100%; }
+      #stage-container > div > figure.support-guitar > figcaption {
+        position: absolute;
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        left: -7%;
+        top: 38%;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0;
+        font-size: 0.8vw;
+        color: #c0c0c0; }
+      #stage-container > div > figure.support-guitar:nth-child(even) {
         margin-top: 25%; }
   #stage-container > img {
     width: 100%; }

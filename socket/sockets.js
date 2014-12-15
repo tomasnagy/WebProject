@@ -24,11 +24,11 @@ module.exports = function(server) {
                 // create firstroom
                 generator.getRandomID(5, function(id) {
                     room = new Room(id);
-                    room.addUser(new User(data));
+                    room.addUser(new User(data.key, data.location));
                     rooms.push(room);
                     socket.join(room.Name);
 
-                    var user = room.getUserById(data);
+                    var user = room.getUserById(data.key);
 
                     socket.emit('current room', {room: room, user: user });
                 });
@@ -41,11 +41,11 @@ module.exports = function(server) {
                 for(i; i < l; i++) {
                     if(rooms[i].Users.length < 4) {
                         // user to room
-                        rooms[i].addUser(new User(data));
+                        rooms[i].addUser(new User(data.key, data.location));
                         socket.join(rooms[i].Name);
 
                         // get users after join to get updated user object
-                        var user = rooms[i].getUserById(data);
+                        var user = rooms[i].getUserById(data.key);
 
                         socket.emit('current room', { room: rooms[i], user: user });
                         io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
@@ -58,10 +58,10 @@ module.exports = function(server) {
                     // no space found create new room
                     generator.getRandomID(5, function(id) {
                         var room = new Room(id);
-                        room.addUser(new User(data));
+                        room.addUser(new User(data.key, data.location));
                         socket.join(room.Name);
 
-                        var user = room.getUserById(data);
+                        var user = room.getUserById(data.key);
                         socket.emit('current room', { room: room, user: user });
                         rooms.push(room);
                     });
