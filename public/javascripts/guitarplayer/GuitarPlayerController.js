@@ -1,7 +1,7 @@
 /**
  * Created by tomasnagy on 11/12/14.
  */
-(function() {
+function GuitarPlayerController() {
     'use strict';
     var socket = io.connect(),
         id,
@@ -10,6 +10,7 @@
         supportguitars = [],
         playChordHandler = function(data) {
             if(data.user.name !== user.name) {
+                shakeRightGuitar(data.user.name);
                 playChordFromSupportGuitar(data.user, data.chord, supportguitars);
             }
         };
@@ -51,7 +52,7 @@
     });
 
 
-})();
+};
 
 
 
@@ -61,54 +62,117 @@ function loadGuitar(socket, user, roomName) {
         chord2 = document.getElementById('chord2'),
         chord3 = document.getElementById('chord3'),
         chord4 = document.getElementById('chord4'),
-        guitarImage = document.querySelector('#stage-container > figure > img');
+        guitarImage = document.querySelector('#stage-container > figure > img'),
+        setAllFretsInactive = function() {
+            chord1.className = '';
+            chord2.className = '';
+            chord3.className = '';
+            chord4.className = '';
+        },
+        timer;
 
     // load guitar
     guitarImage.src = "/images/guitars/" + user.guitar +".svg";
 
     // add handlers
-    chord1.addEventListener('mouseenter', function() {
-        guitarItem.playChord1();
+    chord1.addEventListener('mouseenter', function(e) {
+        guitarItem.playChord1(chord1);
+        setAllFretsInactive();
+        chord1.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
         socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
     });
 
-    chord2.addEventListener('mouseenter', function() {
-        guitarItem.playChord2();
+    chord2.addEventListener('mouseenter', function(e) {
+        guitarItem.playChord2(chord2);
+        setAllFretsInactive();
+        chord2.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
         socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
     });
 
-    chord3.addEventListener('mouseenter', function() {
-        guitarItem.playChord3();
+    chord3.addEventListener('mouseenter', function(e) {
+        guitarItem.playChord3(chord3);
+        setAllFretsInactive();
+        chord3.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
         socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
     });
 
-    chord4.addEventListener('mouseenter', function() {
-        guitarItem.playChord4();
+    chord4.addEventListener('mouseenter', function(e) {
+        guitarItem.playChord4(chord4);
+        setAllFretsInactive();
+        chord4.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
         socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
     });
+
+
 
     // keyhandlers
     window.addEventListener('keydown', function(e) {
         switch(e.keyCode) {
             case 65:
-                guitarItem.playChord1();
+                guitarItem.playChord1(chord1);
+                setAllFretsInactive();
+                chord1.className = 'playing';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    setAllFretsInactive();
+                }, 7000);
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 81:
                 // azerty
-                guitarItem.playChord1();
+                guitarItem.playChord1(chord1);
+                setAllFretsInactive();
+                chord1.className = 'playing';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    setAllFretsInactive();
+                }, 7000);
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 83:
-                guitarItem.playChord2();
+                guitarItem.playChord2(chord2);
+                setAllFretsInactive();
+                chord2.className = 'playing';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    setAllFretsInactive();
+                }, 7000);
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
                 break;
             case 68:
-                guitarItem.playChord3();
+                guitarItem.playChord3(chord3);
+                setAllFretsInactive();
+                chord3.className = 'playing';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    setAllFretsInactive();
+                }, 7000);
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
                 break;
             case 70:
-                guitarItem.playChord4();
+                guitarItem.playChord4(chord4);
+                setAllFretsInactive();
+                chord4.className = 'playing';
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    setAllFretsInactive();
+                }, 7000);
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
                 break;
         }
@@ -180,4 +244,15 @@ function playChordFromSupportGuitar(user, chord, supportguitars) {
             }
         }
     }
+}
+
+function shakeRightGuitar(name) {
+    var guitarToShake = document.getElementById(name),
+        shakeTween = function(item, repeatCount){
+        TweenMax.to(item,0.1,{repeat:repeatCount-1, x:-4, delay: 0.1}).to(item, 0.1, {repeat:repeatCount-1, x: +4, delay: 0.1});
+        TweenMax.to(item,0.1,{y:0, x:0, delay:(repeatCount+1) * 0.1});
+    };
+
+    // recursive!!!
+    shakeTween(guitarToShake, 60);
 }

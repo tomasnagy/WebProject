@@ -9,6 +9,7 @@
         $scope.layoutDone = function() {
             $timeout(function() {
                 animateAllTheThings($scope.items);
+                GuitarPlayerController();
             }, 0);
         };
 

@@ -76,7 +76,11 @@ body {
       left: 40.5%;
       width: 5%;
       height: 6%;
+      opacity: .5;
       background-color: #f00; }
+      #stage-container > figure > div.playing {
+        opacity: 1;
+        border: solid 1px black; }
       #stage-container > figure > div#chord2 {
         top: 30%;
         background-color: #0f0; }

@@ -101,7 +101,12 @@ body {
       left: 40.5%;
       width: 5%;
       height: 6%;
+      opacity: .5;
       background-color: #f00;
+      &.playing {
+        opacity: 1;
+        border: solid 1px black;
+      }
 
       &#chord2 {
         top: 30%;
