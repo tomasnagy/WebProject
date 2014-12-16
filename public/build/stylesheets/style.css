@@ -1,6 +1,3 @@
-.active {
-  color: #000000; }
-
 body {
   background-color: #c0c0c0;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
@@ -8,6 +5,8 @@ body {
 
 #container {
   height: 100%;
+  margin: 0;
+  padding: 0;
   position: relative; }
 
 #background-image {
@@ -30,12 +29,19 @@ body {
             transition: color .2s;
     cursor: pointer;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none; }
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     #background-image > p.active {
       color: #000000; }
     #background-image > p:nth-child(3) {
       top: 19.5%; }
+    #background-image > p:nth-child(4) {
+      top: 32.5%; }
+    #background-image > p:nth-child(5) {
+      top: 42.75%; }
+    #background-image > p:nth-child(6) {
+      top: 50.75%; }
     #background-image > p:hover {
       color: #000; }
 
@@ -55,16 +61,16 @@ body {
       margin: 35% 14% 0 0;
       width: 15%;
       float: left;
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-      -webkit-transform: rotate(45deg); }
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
       #stage-container > div > figure.support-guitar > img {
         width: 100%; }
       #stage-container > div > figure.support-guitar > figcaption {
         position: absolute;
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
         left: -7%;
         top: 38%;
         margin: 0;
@@ -85,9 +91,9 @@ body {
     position: absolute;
     left: 40%;
     top: 44%;
-    -ms-transform: rotate(70deg);
-        transform: rotate(70deg);
-    -webkit-transform: rotate(70deg); }
+    -webkit-transform: rotate(70deg);
+        -ms-transform: rotate(70deg);
+            transform: rotate(70deg); }
     #stage-container > figure > img {
       width: 100%; }
     #stage-container > figure > div {
@@ -99,8 +105,7 @@ body {
       opacity: .5;
       background-color: #f00; }
       #stage-container > figure > div.playing {
-        opacity: 1;
-        border: solid 1px black; }
+        opacity: 1; }
       #stage-container > figure > div#chord2 {
         top: 30%;
         background-color: #0f0; }
@@ -121,9 +126,8 @@ section {
   box-shadow: 5px 5px 10px #888;
   left: 3%;
   top: 4.5%; }
-  section:nth-child(odd) {
+  section:nth-child(even) {
     right: 3%;
-    top: 18.5%;
     left: auto; }
   section > h1, section h2 {
     font-weight: normal;

@@ -5,7 +5,7 @@ var HistoryAnimationItem = function(index, data) {
     'use strict';
     this.index = index;
     this.data = data;
-    this.year = document.querySelectorAll('.year')[index];
+    this.year = document.querySelectorAll('.year')[this.index];
     this.guitarItem = document.getElementsByTagName('section')[index];
     this.fullHeight = 0;
     this.smallHeight = 0;
@@ -23,7 +23,6 @@ var HistoryAnimationItem = function(index, data) {
 HistoryAnimationItem.prototype = {
     get IsOpen() { return this.isOpen; },
     loadImages: function() {
-        console.log("RECALC");
         var self = this;
 
         self.guitarItem.children[2].src = self.data[self.index].Image;
@@ -35,8 +34,8 @@ HistoryAnimationItem.prototype = {
     calculateAnimations: function() {
         var self = this;
 
-        this.fullHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));
 
+        this.fullHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));
 
         // hide extra data
         for (this.i; this.i >= 0; this.i--) {
@@ -45,6 +44,10 @@ HistoryAnimationItem.prototype = {
 
         // calculate small height
         this.smallHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));// - parseInt(window.getComputedStyle(currentItem, null).getPropertyValue('padding'));
+
+        // set top -> get top from correlating year
+        this.guitarItem.style.top = this.year.offsetTop - (this.smallHeight / 4) + 'px';
+
 
         // hide all
         for (this.j; this.j >= 0; this.j--) {

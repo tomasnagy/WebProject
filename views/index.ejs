@@ -4,16 +4,17 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/normalize.css"/>
     <link rel='stylesheet' href='/build/stylesheets/style.min.css'/>
+    <!--<script src="/build/javascript/app.min.js" defer></script>-->
 </head>
 <body data-ng-app="app">
         <!--background will be absolute, background forces height-->
     <div id="container" data-ng-controller="HistoryItemController">
         <figure id="background-image">
-            <img src="/images/bg.svg" alt="background" title="background"/>
+            <img src="/images/bg.svg" alt="background"/>
 
-            <p class="year" data-ng-repeat="i in items" data-ng-bind="i.year"></p>
+            <p class="year" data-ng-repeat="i in items" data-ng-bind="i.year"> </p>
 
-            <section data-ng-repeat="i in items" repeat-done="layoutDone()">
+            <section data-ng-repeat="i in items" repeat-done="layoutDone()" data-ng-cloak>
                 <h1 data-ng-bind="i.title"></h1>
                 <h2 data-ng-bind="i.date"></h2>
                 <img alt="{{i.title}}"/>
@@ -21,7 +22,7 @@
             </section>
         </figure>
         <div id="stage-container">
-            <img src="/images/stage.svg" alt="stage" title="stage"/>
+            <img src="/images/stage.svg" alt="stage"/>
             <figure>
                 <img src="" alt=""/>
                 <div id="chord1"></div>
@@ -45,17 +46,16 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
         <!--Own scripts-->
-    <!--<script src="javascripts/lib/window.resizeStop.js"></script>-->
-    <!--<script src="javascripts/pollyfills.js"></script>-->
-    <!--<script src="/javascripts/guitarhistory/animation/HistoryAnimationItem.js"></script>-->
-    <!--<script src="/javascripts/animations.js"></script>-->
-    <!--<script src="/javascripts/guitarhistory/app.js" type="text/javascript"></script>-->
-    <!--<script src="/javascripts/guitarhistory/model/GuitarHistoryItem.js" type="text/javascript"></script>-->
-    <!--<script src="/javascripts/guitarhistory/directive/layoutDoneDirective.js" type="text/javascript"></script>-->
-    <!--<script src="/javascripts/guitarhistory/controller/HistoryItemController.js" type="text/javascript"></script>-->
-    <!--<script src="/javascripts/location/LocationController.js"></script>-->
-    <!--<script src="/javascripts/guitarplayer/GuitarPlayerItem.js"></script>-->
-    <!--<script src="/javascripts/guitarplayer/GuitarPlayerController.js"></script>-->
-    <script src="/build/javascript/app.min.js"></script>
+    <script src="javascripts/lib/window.resizeStop.js"></script>
+    <script src="javascripts/pollyfills.js"></script>
+    <script src="/javascripts/guitarhistory/animation/HistoryAnimationItem.js"></script>
+    <script src="/javascripts/animations.js"></script>
+    <script src="/javascripts/guitarhistory/app.js" type="text/javascript"></script>
+    <script src="/javascripts/guitarhistory/model/GuitarHistoryItem.js" type="text/javascript"></script>
+    <script src="/javascripts/guitarhistory/directive/layoutDoneDirective.js" type="text/javascript"></script>
+    <script src="/javascripts/guitarhistory/controller/HistoryItemController.js" type="text/javascript"></script>
+    <script src="/javascripts/location/LocationController.js"></script>
+    <script src="/javascripts/guitarplayer/GuitarPlayerItem.js"></script>
+    <script src="/javascripts/guitarplayer/GuitarPlayerController.js"></script>
 </body>
 </html>

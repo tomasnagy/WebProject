@@ -1,6 +1,9 @@
-.active {
-  color: #000000;
-}
+$item-top-2: 19.5%;
+$item-top-3: 32.5%;
+$item-top-4: 42.75%;
+$item-top-5: 50.75%;
+$item-top-6: 19.5%;
+$item-top-7: 19.5%;
 
 body {
   background-color: #c0c0c0;
@@ -10,6 +13,8 @@ body {
 
 #container {
   height: 100%;
+  margin:0;
+  padding: 0;
   position: relative;
 }
 
@@ -19,6 +24,7 @@ body {
   // chrome windows fix
   overflow: hidden;
   top: 0px;
+
 
   // IE fix
   > img {
@@ -36,16 +42,26 @@ body {
     color: #c0c0c0;
     transition: color .2s;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    user-select: none;
 
     &.active {
       color: #000000;
     }
 
     &:nth-child(3) {
-      top: 19.5%;
+      top: $item-top-2;
+    }
+
+    &:nth-child(4) {
+      top: $item-top-3;
+    }
+
+    &:nth-child(5) {
+      top: $item-top-4;
+    }
+
+    &:nth-child(6) {
+      top: $item-top-5;
     }
 
     &:hover {
@@ -71,7 +87,6 @@ body {
       width: 15%;
       float: left;
         transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
 
       > img {
         width: 100%;
@@ -79,7 +94,6 @@ body {
       > figcaption {
         position: absolute;
         transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
         left: -7%;
         top: 38%;
         margin: 0;
@@ -106,7 +120,6 @@ body {
     left: 40%;
     top: 44%;
     transform: rotate(70deg);
-    -webkit-transform: rotate(70deg);
 
     > img {
       // IE fix
@@ -123,7 +136,6 @@ body {
       background-color: #f00;
       &.playing {
         opacity: 1;
-        border: solid 1px black;
       }
 
       &#chord2 {
@@ -155,10 +167,9 @@ section {
   left: 3%;
   top: 4.5%;
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     //float:right;
     right: 3%;
-    top: 18.5%;
     left: auto;
   }
 
