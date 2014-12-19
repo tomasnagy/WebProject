@@ -206,7 +206,7 @@ function showBackgroundGuitars(users, currentUser) {
         if(item.name !== currentUser) {
             supportGuitar = '<figure class="support-guitar" id="';
             supportGuitar += item.name;
-            supportGuitar += '"> <img src="/images/guitars/';
+            supportGuitar += '"> <img src="/build/images/';
             supportGuitar += item.guitar;
             supportGuitar += '.svg" alt="';
             supportGuitar += item.guitar;

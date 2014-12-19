@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
     notify = require('gulp-notify'),
     livereload = require('gulp-livereload'),
     concat = require('gulp-concat'),
@@ -45,8 +46,15 @@ gulp.task('js', function () {
         .pipe(notify({ message: 'Scripts minified!'}));
 });
 
+gulp.task('images', function() {
+   return gulp.src('public/images/**')
+       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true}))
+       .pipe(gulp.dest('public/build/images'))
+       .pipe(notify({ message: 'Images compressed!'}));
+});
+
 gulp.task('default', ['clean'], function() {
-    gulp.start('js', 'scss');
+    gulp.start('js', 'scss', 'images');
 });
 
 // Livereload
@@ -55,6 +63,8 @@ gulp.task('Watcher', function() {
     gulp.watch('public/stylesheets/style.scss', ['scss']);
 
     gulp.watch(['public/javascripts/**/*.js', '!public/javascripts/**/*.min.js'], ['js']);
+
+    gulp.watch(['public/images/**'], ['images']);
 
     livereload.listen();
 
