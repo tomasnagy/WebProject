@@ -178,3 +178,6 @@ section {
 .closedItem {
   width: 0;
   opacity: 0; }
+
+.opaqueItem {
+  opacity: 0.2; }
