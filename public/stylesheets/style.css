@@ -1,7 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
 body {
-  background-color: #c0c0c0;
+  background-color: #6d695c;
+  background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+  background-size: 70px 120px;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
   overflow-x: hidden; }
+
+header {
+  padding: 2%; }
+  header > h1 {
+    text-align: center;
+    font-family: Tangerine;
+    font-size: 5vw;
+    margin: 0;
+    color: white; }
 
 #container {
   height: 100%;
@@ -20,8 +32,8 @@ body {
     position: absolute;
     text-align: center;
     display: block;
-    top: 5.5%;
-    left: 44%;
+    top: 5.25%;
+    left: 44.3%;
     width: 10%;
     font-size: 3vw;
     color: #c0c0c0;
@@ -31,20 +43,23 @@ body {
     #background-image > inlay.active {
       color: #000; }
     #background-image > inlay:nth-child(3) {
-      top: 19.5%; }
+      top: 19.25%; }
     #background-image > inlay:nth-child(4) {
-      top: 32.5%; }
+      top: 32.25%; }
     #background-image > inlay:nth-child(5) {
-      top: 42.75%; }
+      top: 42.5%;
+      font-size: 2.8vw; }
     #background-image > inlay:nth-child(6) {
-      top: 50.75%; }
+      top: 50.75%;
+      font-size: 2.5vw; }
     #background-image > inlay:hover {
       color: #000; }
 
 #stage-container {
+  z-index: -1001;
   position: absolute;
   width: 100%;
-  top: 105%;
+  top: 99%;
   overflow: hidden; }
   #stage-container > div {
     z-index: 100;
@@ -113,13 +128,13 @@ section {
   position: absolute;
   padding: 1% 3% 1% 3%;
   width: 30%;
-  box-shadow: 5px 5px 10px #888;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   left: 3%;
   top: 4.5%; }
   section:nth-child(even) {
     right: 3%;
     left: auto; }
-  section > h1, section h2 {
+  section > h2, section h3 {
     font-weight: normal;
     text-align: center;
     opacity: 0;

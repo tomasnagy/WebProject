@@ -13,11 +13,11 @@ var HistoryAnimationItem = function(index, data) {
     this.extraData = [this.guitarItem.children[2], this.guitarItem.children[3]];
     this.i = this.mainData.length - 1;
     this.j = this.extraData.length - 1;
-    this.tl1 = new TimelineMax({paused: 'true'});
-    this.tl2 = new TimelineMax({paused: 'true'});
-    this.tl3 = new TimelineMax({paused: 'true'});
-    this.tl4 = new TimelineMax({paused: 'true'});
-    this.tl5 = new TimelineMax({paused: 'true'});
+    this.tl1 = new TimelineLite({paused: 'true'});
+    this.tl2 = new TimelineLite({paused: 'true'});
+    this.tl3 = new TimelineLite({paused: 'true'});
+    this.tl4 = new TimelineLite({paused: 'true'});
+    this.tl5 = new TimelineLite({paused: 'true'});
     this.isOpen = false;
 };
 
@@ -195,11 +195,11 @@ HistoryAnimationItem.prototype = {
         this.tl3 = null;
         this.tl4 = null;
         this.tl5 = null;
-        this.tl1 = new TimelineMax({paused: 'true'});
-        this.tl2 = new TimelineMax({paused: 'true'});
-        this.tl3 = new TimelineMax({paused: 'true'});
-        this.tl4 = new TimelineMax({paused: 'true'});
-        this.tl5 = new TimelineMax({paused: 'true'});
+        this.tl1 = new TimelineLite({paused: 'true'});
+        this.tl2 = new TimelineLite({paused: 'true'});
+        this.tl3 = new TimelineLite({paused: 'true'});
+        this.tl4 = new TimelineLite({paused: 'true'});
+        this.tl5 = new TimelineLite({paused: 'true'});
 
         this.fullHeight = 0;
         this.smallHeight = 0;
