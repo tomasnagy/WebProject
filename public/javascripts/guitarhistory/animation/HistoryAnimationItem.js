@@ -5,7 +5,7 @@ var HistoryAnimationItem = function(index, data) {
     'use strict';
     this.index = index;
     this.data = data;
-    this.year = document.querySelectorAll('.year')[this.index];
+    this.year = document.querySelectorAll('inlay')[this.index];
     this.guitarItem = document.getElementsByTagName('section')[index];
     this.fullHeight = 0;
     this.smallHeight = 0;
@@ -36,6 +36,7 @@ HistoryAnimationItem.prototype = {
 
 
         this.fullHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));
+        console.log("FULLHEIGHT: " + this.fullHeight);
 
         // hide extra data
         for (this.i; this.i >= 0; this.i--) {
@@ -47,7 +48,6 @@ HistoryAnimationItem.prototype = {
 
         // set top -> get top from correlating year
         this.guitarItem.style.top = this.year.offsetTop - (this.smallHeight / 4) + 'px';
-
 
         // hide all
         for (this.j; this.j >= 0; this.j--) {

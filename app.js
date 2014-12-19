@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var api = require('./routes/api');
+var directives = require('./routes/directives');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/api', api);
+app.use('/directives', directives);
 
 var connectDB = require("./data/connectDB.js");
 

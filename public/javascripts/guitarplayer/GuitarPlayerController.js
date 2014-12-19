@@ -21,7 +21,7 @@ function GuitarPlayerController() {
     socket.on('getkey', function(data) {
         // save id + join room
         id = data;
-        console.log(id);
+        console.log(id.name);
         getLocation(function(location) {
             socket.emit('join room', {key: data, location: location});
             socket.on('current room', function(data) {
@@ -81,7 +81,7 @@ function loadGuitar(socket, user, roomName) {
 
     // add handlers
     chord1.addEventListener('mouseenter', function(e) {
-        guitarItem.playChord1(chord1);
+        guitarItem.playChord1();
         setAllFretsInactive();
         chord1.className = 'playing';
         clearTimeout(timer);
@@ -92,7 +92,7 @@ function loadGuitar(socket, user, roomName) {
     });
 
     chord2.addEventListener('mouseenter', function(e) {
-        guitarItem.playChord2(chord2);
+        guitarItem.playChord2();
         setAllFretsInactive();
         chord2.className = 'playing';
         clearTimeout(timer);
@@ -103,7 +103,7 @@ function loadGuitar(socket, user, roomName) {
     });
 
     chord3.addEventListener('mouseenter', function(e) {
-        guitarItem.playChord3(chord3);
+        guitarItem.playChord3();
         setAllFretsInactive();
         chord3.className = 'playing';
         clearTimeout(timer);
@@ -114,7 +114,7 @@ function loadGuitar(socket, user, roomName) {
     });
 
     chord4.addEventListener('mouseenter', function(e) {
-        guitarItem.playChord4(chord4);
+        guitarItem.playChord4();
         setAllFretsInactive();
         chord4.className = 'playing';
         clearTimeout(timer);
@@ -130,7 +130,7 @@ function loadGuitar(socket, user, roomName) {
     window.addEventListener('keydown', function(e) {
         switch(e.keyCode) {
             case 65:
-                guitarItem.playChord1(chord1);
+                guitarItem.playChord1();
                 setAllFretsInactive();
                 chord1.className = 'playing';
                 clearTimeout(timer);
@@ -141,7 +141,7 @@ function loadGuitar(socket, user, roomName) {
                 break;
             case 81:
                 // azerty
-                guitarItem.playChord1(chord1);
+                guitarItem.playChord1();
                 setAllFretsInactive();
                 chord1.className = 'playing';
                 clearTimeout(timer);
@@ -151,7 +151,7 @@ function loadGuitar(socket, user, roomName) {
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 83:
-                guitarItem.playChord2(chord2);
+                guitarItem.playChord2();
                 setAllFretsInactive();
                 chord2.className = 'playing';
                 clearTimeout(timer);
@@ -161,7 +161,7 @@ function loadGuitar(socket, user, roomName) {
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
                 break;
             case 68:
-                guitarItem.playChord3(chord3);
+                guitarItem.playChord3();
                 setAllFretsInactive();
                 chord3.className = 'playing';
                 clearTimeout(timer);
@@ -171,7 +171,7 @@ function loadGuitar(socket, user, roomName) {
                 socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
                 break;
             case 70:
-                guitarItem.playChord4(chord4);
+                guitarItem.playChord4();
                 setAllFretsInactive();
                 chord4.className = 'playing';
                 clearTimeout(timer);

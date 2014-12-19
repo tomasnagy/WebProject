@@ -31,7 +31,7 @@ body {
     width: 100%;
   }
 
-  > p {
+  > inlay {
     position: absolute;
     text-align: center;
     display: block;
@@ -45,7 +45,7 @@ body {
     user-select: none;
 
     &.active {
-      color: #000000;
+      color: #000;
     }
 
     &:nth-child(3) {
@@ -185,7 +185,6 @@ section {
     margin: 0 auto;
     width: 70%;
     opacity: 0;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 }

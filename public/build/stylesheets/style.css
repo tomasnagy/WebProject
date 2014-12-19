@@ -16,7 +16,7 @@ body {
   top: 0px; }
   #background-image > img {
     width: 100%; }
-  #background-image > p {
+  #background-image > inlay {
     position: absolute;
     text-align: center;
     display: block;
@@ -32,17 +32,17 @@ body {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    #background-image > p.active {
-      color: #000000; }
-    #background-image > p:nth-child(3) {
+    #background-image > inlay.active {
+      color: #000; }
+    #background-image > inlay:nth-child(3) {
       top: 19.5%; }
-    #background-image > p:nth-child(4) {
+    #background-image > inlay:nth-child(4) {
       top: 32.5%; }
-    #background-image > p:nth-child(5) {
+    #background-image > inlay:nth-child(5) {
       top: 42.75%; }
-    #background-image > p:nth-child(6) {
+    #background-image > inlay:nth-child(6) {
       top: 50.75%; }
-    #background-image > p:hover {
+    #background-image > inlay:hover {
       color: #000; }
 
 #stage-container {
@@ -140,8 +140,8 @@ section {
     width: 70%;
     opacity: 0;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
 
 .active {
   color: #000; }
