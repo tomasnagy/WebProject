@@ -13,7 +13,10 @@ function GuitarPlayerController() {
                 shakeRightGuitar(data.user.name);
                 playChordFromSupportGuitar(data.user, data.chord, supportguitars);
             }
-        };
+        },
+        locationLoader = document.getElementById('locationloader'),
+        mainGuitar = document.querySelector('#stage-container>figure'),
+        supportGuitars = document.getElementById('support-guitars');
 
     // request a key
     socket.emit('requestkey');
@@ -27,6 +30,11 @@ function GuitarPlayerController() {
             socket.on('current room', function(data) {
                 room = data.room;
                 user = data.user;
+
+                // show guitar + remove preloader
+                TweenLite.to(locationLoader, 0.2, {className: 'hidden'});
+                TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=hidden'});
+
 
                 // load appropriate guitar
                 loadGuitar(socket, user, room.name);
@@ -206,7 +214,7 @@ function showBackgroundGuitars(users, currentUser) {
         if(item.name !== currentUser) {
             supportGuitar = '<figure class="support-guitar" id="';
             supportGuitar += item.name;
-            supportGuitar += '"> <img src="/build/images/';
+            supportGuitar += '"> <img src="/build/images/guitars/';
             supportGuitar += item.guitar;
             supportGuitar += '.svg" alt="';
             supportGuitar += item.guitar;
