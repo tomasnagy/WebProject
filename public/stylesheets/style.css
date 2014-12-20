@@ -12,6 +12,21 @@ body {
   position: relative;
   z-index: -1200; }
 
+button {
+  width: 15%;
+  padding: 1%;
+  font-size: 2.5vw;
+  color: #fff;
+  background: none;
+  border-radius: 5px;
+  font-family: Tangerine;
+  border: none;
+  float: right; }
+  button:focus {
+    outline: 0; }
+  button:hover {
+    color: #c0c0c0; }
+
 header {
   padding: 2%; }
   header > h1 {
@@ -58,6 +73,7 @@ div#data-container {
   height: 100%;
   margin: 0;
   padding: 0;
+  clear: both;
   position: relative;
   width: 100%;
   z-index: -1000; }
@@ -90,27 +106,27 @@ div#data-container {
     div#data-container > inlay:hover {
       color: #000; }
 
-#stage-container {
+div#stage-container {
   z-index: -1001;
   position: relative;
   width: 100%;
-  margin-top: -1%;
+  margin-top: -5%;
   overflow: hidden; }
-  #stage-container > div {
+  div#stage-container > div {
     z-index: 100;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden; }
-    #stage-container > div > figure.support-guitar {
+    div#stage-container > div > figure.support-guitar {
       margin: 35% 13% 0 0;
       width: 15%;
       float: left;
       transform: rotate(45deg); }
-      #stage-container > div > figure.support-guitar > img {
+      div#stage-container > div > figure.support-guitar > img {
         width: 100%; }
-      #stage-container > div > figure.support-guitar > figcaption {
+      div#stage-container > div > figure.support-guitar > figcaption {
         position: absolute;
         transform: rotate(-90deg);
         left: -7%;
@@ -122,14 +138,14 @@ div#data-container {
         padding: 0;
         font-size: 0.8vw;
         color: #c0c0c0; }
-      #stage-container > div > figure.support-guitar:first-child {
+      div#stage-container > div > figure.support-guitar:first-child {
         margin: 35% 14% 0 15%; }
-      #stage-container > div > figure.support-guitar:nth-child(even) {
+      div#stage-container > div > figure.support-guitar:nth-child(even) {
         margin-top: 25%; }
-  #stage-container > img {
+  div#stage-container > img {
     width: 100%;
     display: block; }
-  #stage-container > figure {
+  div#stage-container > figure {
     z-index: 101;
     width: 30%;
     height: auto;
@@ -137,9 +153,9 @@ div#data-container {
     left: 40%;
     top: 44%;
     transform: rotate(70deg); }
-    #stage-container > figure > img {
+    div#stage-container > figure > img {
       width: 100%; }
-    #stage-container > figure > div {
+    div#stage-container > figure > div {
       position: absolute;
       top: 22%;
       left: 40.5%;
@@ -147,17 +163,23 @@ div#data-container {
       height: 6%;
       opacity: .5;
       background-color: #f00; }
-      #stage-container > figure > div.playing {
+      div#stage-container > figure > div.playing {
         opacity: 1; }
-      #stage-container > figure > div#chord2 {
+      div#stage-container > figure > div#chord2 {
         top: 30%;
         background-color: #0f0; }
-      #stage-container > figure > div#chord3 {
+      div#stage-container > figure > div#chord3 {
         top: 38%;
         background-color: #00f; }
-      #stage-container > figure > div#chord4 {
+      div#stage-container > figure > div#chord4 {
         top: 46%;
         background-color: #ff0; }
+  div#stage-container > button {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    float: none;
+    z-index: 1000; }
 
 .active {
   color: #000; }
@@ -218,6 +240,13 @@ div#locationloader {
   header > h1 {
     font-size: 7vw; }
 
+  button {
+    font-size: 5vw;
+    width: 20%;
+    float: none;
+    display: block;
+    margin: 0 auto; }
+
   section > h2 {
     font-size: 9vw; }
 
@@ -229,9 +258,11 @@ div#locationloader {
     top: auto;
     left: auto;
     right: auto;
-    margin: 20px auto;
+    margin: 0 auto 4% auto;
     opacity: 1;
     width: 90%; }
+    div#data-container > section:last-child {
+      margin-bottom: 0; }
     div#data-container > section > * {
       display: block;
       opacity: 1; }
@@ -251,20 +282,23 @@ div#locationloader {
     display: block;
     opacity: 1; }
 
-  #stage-container {
-    margin-top: -10%; }
-    #stage-container > figure {
+  div#stage-container {
+    margin-top: -5%; }
+    div#stage-container > figure {
       width: 83%;
       left: 10%;
       top: -37%; }
-    #stage-container > div {
+    div#stage-container > div {
       top: 5%;
       left: 30%;
       padding-left: 17%; }
-      #stage-container > div > figure.support-guitar {
+      div#stage-container > div > figure.support-guitar {
         margin: 25% -5% 0 0;
         width: 21%; }
-        #stage-container > div > figure.support-guitar:first-child {
-          margin: 25% -5% 0 0; } }
+        div#stage-container > div > figure.support-guitar:first-child {
+          margin: 25% -5% 0 0; }
+    div#stage-container > button {
+      right: 40%;
+      top: 10%; } }
 
 /*# sourceMappingURL=style.css.map */

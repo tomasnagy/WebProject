@@ -27,6 +27,24 @@ body {
   z-index: -1200;
 }
 
+button {
+  width: 15%;
+  padding: 1%;
+  font-size: 2.5vw;
+  color: #fff;
+  background: none;
+  border-radius: 5px;
+  font-family: Tangerine;
+  border: none;
+  float: right;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    color: #c0c0c0;
+  }
+}
+
 header {
   padding: 2%;
   > h1 {
@@ -87,6 +105,7 @@ div#data-container {
   height: 100%;
   margin:0;
   padding: 0;
+  clear: both;
   position: relative;
   width: 100%;
   z-index: -1000;
@@ -139,11 +158,11 @@ div#data-container {
 }
 
 
-#stage-container {
+div#stage-container {
   z-index: -1001;
   position: relative;
   width: 100%;
-  margin-top: -1%;
+  margin-top: -5%;
   overflow: hidden;
   > div {
     z-index: 100;
@@ -228,6 +247,13 @@ div#data-container {
       }
     }
   }
+  > button {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    float: none;
+    z-index: 1000;
+  }
 }
 
 .active {
@@ -304,6 +330,14 @@ div#locationloader {
     font-size: 7vw;
   }
 
+  button {
+    font-size: 5vw;
+    width: 20%;
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
   section > h2 {
     font-size: 9vw;
   }
@@ -317,9 +351,12 @@ div#locationloader {
     top: auto;
     left: auto;
     right: auto;
-    margin: 20px auto;
+    margin: 0 auto 4% auto;
     opacity: 1;
     width: 90%;
+    &:last-child {
+      margin-bottom: 0;
+    }
     > * {
       display: block;
       opacity: 1;
@@ -345,8 +382,8 @@ div#locationloader {
     opacity: 1;
   }
 
-  #stage-container {
-    margin-top: -10%;
+  div#stage-container {
+    margin-top: -5%;
     > figure {
       width: 83%;
       left: 10%;
@@ -363,6 +400,10 @@ div#locationloader {
           margin: 25% -5% 0 0;
         }
       }
+    }
+    > button {
+      right: 40%;
+      top: 10%;
     }
   }
 }
