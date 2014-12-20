@@ -32,8 +32,8 @@ function GuitarPlayerController() {
                 user = data.user;
 
                 // show guitar + remove preloader
-                TweenLite.to(locationLoader, 0.2, {className: 'hidden'});
-                TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=hidden'});
+                TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
+                TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
 
 
                 // load appropriate guitar
@@ -132,6 +132,50 @@ function loadGuitar(socket, user, roomName) {
         socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
     });
 
+    chord1.addEventListener('click', function(e) {
+        guitarItem.playChord1();
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
+        setAllFretsInactive();
+        chord1.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
+    });
+
+    chord2.addEventListener('click', function(e) {
+        guitarItem.playChord2();
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
+        setAllFretsInactive();
+        chord2.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
+    });
+
+    chord3.addEventListener('click', function(e) {
+        guitarItem.playChord3();
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
+        setAllFretsInactive();
+        chord3.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
+    });
+
+    chord4.addEventListener('click', function(e) {
+        guitarItem.playChord4();
+        socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
+        setAllFretsInactive();
+        chord4.className = 'playing';
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            setAllFretsInactive();
+        }, 7000);
+    });
+
 
 
     // keyhandlers
@@ -139,54 +183,54 @@ function loadGuitar(socket, user, roomName) {
         switch(e.keyCode) {
             case 65:
                 guitarItem.playChord1();
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 setAllFretsInactive();
                 chord1.className = 'playing';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     setAllFretsInactive();
                 }, 7000);
-                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 81:
                 // azerty
                 guitarItem.playChord1();
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 setAllFretsInactive();
                 chord1.className = 'playing';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     setAllFretsInactive();
                 }, 7000);
-                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
                 break;
             case 83:
                 guitarItem.playChord2();
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
                 setAllFretsInactive();
                 chord2.className = 'playing';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     setAllFretsInactive();
                 }, 7000);
-                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
                 break;
             case 68:
                 guitarItem.playChord3();
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
                 setAllFretsInactive();
                 chord3.className = 'playing';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     setAllFretsInactive();
                 }, 7000);
-                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
                 break;
             case 70:
                 guitarItem.playChord4();
+                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
                 setAllFretsInactive();
                 chord4.className = 'playing';
                 clearTimeout(timer);
                 timer = setTimeout(function() {
                     setAllFretsInactive();
                 }, 7000);
-                socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
                 break;
         }
     });

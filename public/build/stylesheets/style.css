@@ -5,7 +5,9 @@ body {
   background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
   background-size: 70px 120px;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1200; }
 
 header {
   padding: 2%; }
@@ -54,12 +56,13 @@ div#container {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 #background-image {
   width: 100%;
   z-index: -1000;
-  overflow: hidden;
+  overflow-x: hidden;
   top: 0px; }
   #background-image > img {
     width: 100%; }
@@ -96,9 +99,9 @@ div#container {
 
 #stage-container {
   z-index: -1001;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 99%;
+  margin-top: -1%;
   overflow: hidden; }
   #stage-container > div {
     z-index: 100;
@@ -106,9 +109,9 @@ div#container {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 0 0 15%; }
+    overflow: hidden; }
     #stage-container > div > figure.support-guitar {
-      margin: 35% 14% 0 0;
+      margin: 35% 13% 0 0;
       width: 15%;
       float: left;
       -webkit-transform: rotate(45deg);
@@ -130,10 +133,13 @@ div#container {
         padding: 0;
         font-size: 0.8vw;
         color: #c0c0c0; }
+      #stage-container > div > figure.support-guitar:first-child {
+        margin: 35% 14% 0 15%; }
       #stage-container > div > figure.support-guitar:nth-child(even) {
         margin-top: 25%; }
   #stage-container > img {
-    width: 100%; }
+    width: 100%;
+    display: block; }
   #stage-container > figure {
     z-index: 101;
     width: 30%;
@@ -205,6 +211,9 @@ div#container {
 .opaqueItem {
   opacity: 0.2; }
 
+.invisible {
+  opacity: 0; }
+
 div#locationloader {
   position: absolute;
   margin-top: 35%;
@@ -217,3 +226,51 @@ div#locationloader {
     text-align: center; }
   div#locationloader > img {
     display: block; }
+
+@media screen and (max-width: 600px) {
+  header > h1 {
+    font-size: 7vw; }
+
+  section > h2 {
+    font-size: 9vw; }
+
+  section > h3 {
+    font-size: 8vw; }
+
+  #background-image > section {
+    position: relative;
+    top: auto !important;
+    left: auto;
+    right: auto;
+    margin: 20px auto; }
+
+  #background-image > img {
+    display: none; }
+
+  #background-image > inlay {
+    display: none; }
+
+  .hidden, .fullyhidden, .block, .fullshow {
+    display: block;
+    opacity: 1; }
+
+  .closedItem {
+    width: 90%;
+    display: block;
+    opacity: 1; }
+
+  #stage-container {
+    margin-top: -10%; }
+    #stage-container > figure {
+      width: 83%;
+      left: 10%;
+      top: -37%; }
+    #stage-container > div {
+      top: 5%;
+      left: 30%;
+      padding-left: 17%; }
+      #stage-container > div > figure.support-guitar {
+        margin: 25% -5% 0 0;
+        width: 21%; }
+        #stage-container > div > figure.support-guitar:first-child {
+          margin: 25% -5% 0 0; } }

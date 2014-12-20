@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/normalize.css"/>
     <link rel='stylesheet' href='/build/stylesheets/style.min.css'/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <!--<script src="/build/javascript/app.min.js" defer></script>-->
 </head>
 <body data-ng-app="app">
@@ -24,25 +26,25 @@
                 <p data-ng-bind="i.description"></p>
             </section>
         </figure>
-        <div id="stage-container">
-            <div id="locationloader">
-                <img src="images/loading-spin.svg" alt="loading spinner"/>
-                <h4>Loading location...</h4>
-                <p>Please make sure you specifically allow or deny use of your location</p>
-            </div>
-            <img src="/images/stage.svg" alt="stage"/>
-            <figure class="hidden">
-                <img src="" alt=""/>
-                <div id="chord1"></div>
-                <div id="chord2"></div>
-                <div id="chord3"></div>
-                <div id="chord4"></div>
-            </figure>
-            <div class="hidden" id="support-guitars">
-                <!--<img src="images/guitars/cheap.svg" alt="cheap"/>-->
-                <!--<img src="images/guitars/heartBroken.svg" alt="cheap"/>-->
-                <!--<img src="images/guitars/practiceSpace.svg" alt="cheap"/>-->
-            </div>
+    </div>
+    <div id="stage-container">
+        <img src="/images/stage.svg" alt="stage"/>
+        <div id="locationloader">
+            <img src="images/loading-spin.svg" alt="loading spinner"/>
+            <h4>Loading location...</h4>
+            <p>Please make sure you specifically allow or deny use of your location</p>
+        </div>
+        <figure class="invisible">
+            <img src="" alt=""/>
+            <div id="chord1"></div>
+            <div id="chord2"></div>
+            <div id="chord3"></div>
+            <div id="chord4"></div>
+        </figure>
+        <div class="invisible" id="support-guitars">
+            <!--<img src="images/guitars/cheap.svg" alt="cheap"/>-->
+            <!--<img src="images/guitars/heartBroken.svg" alt="cheap"/>-->
+            <!--<img src="images/guitars/practiceSpace.svg" alt="cheap"/>-->
         </div>
     </div>
     <!--CDN Scripts-->
