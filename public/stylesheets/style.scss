@@ -321,10 +321,16 @@ div#locationloader {
 
   #background-image > section {
     position: relative;
-    top: auto !important;
+    top: auto;
     left: auto;
     right: auto;
     margin: 20px auto;
+    opacity: 1;
+    width: 90%;
+    > * {
+      display: block;
+      opacity: 1;
+    }
   }
 
   #background-image > img {

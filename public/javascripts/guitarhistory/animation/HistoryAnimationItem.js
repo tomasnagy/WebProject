@@ -34,6 +34,7 @@ HistoryAnimationItem.prototype = {
     },
     calculateAnimations: function() {
         var self = this,
+            windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
             closeItemsEvent = new CustomEvent(
                 "closeItems",
                 {
@@ -65,6 +66,11 @@ HistoryAnimationItem.prototype = {
                 }
             );
 
+
+        if(windowWidth <= 600) {
+            // dont calc
+            return;
+        }
 
 
         this.fullHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));
