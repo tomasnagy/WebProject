@@ -245,9 +245,12 @@ div#locationloader {
   padding: 0; }
   div#locationloader > * {
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    font-size: 2vw;
+    font-family: Tangerine; }
   div#locationloader > img {
-    display: block; }
+    display: block;
+    width: 2%; }
 
 @media screen and (max-width: 600px) {
   header > h1 {
@@ -312,4 +315,14 @@ div#locationloader {
           margin: 25% -5% 0 0; }
     div#stage-container > button {
       right: 40%;
-      top: 10%; } }
+      top: 10%; }
+    div#stage-container > #locationloader {
+      top: 0;
+      left: 0;
+      overflow: visible;
+      margin-top: 20%;
+      padding-left: 0; }
+      div#stage-container > #locationloader > * {
+        font-size: 4vw; }
+      div#stage-container > #locationloader > img {
+        width: 5%; } }
