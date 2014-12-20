@@ -120,7 +120,12 @@ HistoryAnimationItem.prototype = {
             if(e.detail.source !== self.index) {
                 if(self.isOpen) {
                     self.tl4.play(0);
-                    self.year.children[0].classList.remove('active');
+                    if(self.year.children[0].classList) {
+                        self.year.children[0].classList.remove('active');
+                    } else {
+                        self.year.children[0].className = self.year.children[0].className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+
+                    }
                     self.isOpen = false;
                 }
             }
@@ -157,7 +162,13 @@ HistoryAnimationItem.prototype = {
 
 
         this.year.addEventListener('click', function (e) {
-            e.target.classList.add('active');
+            if(e.target.classList) {
+                e.target.classList.add('active');
+            }
+            else {
+                e.target.className += ' ' + 'active';
+            }
+
             console.log(self.isOpen);
             self.isOpen = true;
             self.tl2.play(0);
@@ -214,7 +225,12 @@ HistoryAnimationItem.prototype = {
         tempItem = this.year.cloneNode(true);
         this.year.parentNode.replaceChild(tempItem, this.year);
         this.year = tempItem;
-        this.year.children[0].classList.remove('active');
+        if (this.year.children[0].classList) {
+            this.year.children[0].classList.remove('active');
+        }
+        else {
+            this.year.children[0].className = this.year.children[0].className.replace(new RegExp('(^|\\b)' + 'active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
 
         for(i; i >=0; i--) {
             currentItem = this.guitarItem.children[i];

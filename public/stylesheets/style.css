@@ -1,4 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Tangerine);
+html {
+  position: relative;
+  z-index: -2000; }
+
 body {
   background-color: #6d695c;
   background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
@@ -26,7 +30,8 @@ section {
   width: 30%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   left: 3%;
-  top: 4.5%; }
+  top: 4.5%;
+  overflow: hidden; }
   section:nth-child(even) {
     right: 3%;
     left: auto; }

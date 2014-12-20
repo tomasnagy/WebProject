@@ -6,6 +6,12 @@ $item-top-4: 42.5%;
 $item-top-5: 50.75%;
 $item-top-6: 19.5%;
 
+// IE fix
+html {
+  position :relative;
+  z-index: -2000;
+}
+
 body {
   //background-color: #c0c0c0;
   background-color: #6d695c;
@@ -42,7 +48,7 @@ section {
   box-shadow: 5px 5px 10px rgba(0,0,0, .3);
   left: 3%;
   top: 4.5%;
-
+  overflow: hidden;
 
 
   &:nth-child(even) {
