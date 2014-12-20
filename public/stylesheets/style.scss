@@ -83,21 +83,13 @@ h2, h3 {
   font-family: Tangerine;
 }
 
-div#container {
+div#data-container {
   height: 100%;
   margin:0;
   padding: 0;
   position: relative;
-  overflow-x: hidden;
-}
-
-
-#background-image {
   width: 100%;
   z-index: -1000;
-  // chrome windows fix
-  overflow-x: hidden;
-  top: 0px;
 
 
   // IE fix
@@ -145,6 +137,7 @@ div#container {
     }
   }
 }
+
 
 #stage-container {
   z-index: -1001;
@@ -319,7 +312,7 @@ div#locationloader {
     font-size: 8vw;
   }
 
-  #background-image > section {
+  div#data-container  > section {
     position: relative;
     top: auto;
     left: auto;
@@ -333,11 +326,11 @@ div#locationloader {
     }
   }
 
-  #background-image > img {
+  div#data-container  > img {
     display: none;
   }
 
-  #background-image > inlay {
+  div#data-container  > inlay {
     display: none;
   }
 

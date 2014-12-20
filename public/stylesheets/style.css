@@ -54,21 +54,16 @@ section {
 h2, h3 {
   font-family: Tangerine; }
 
-div#container {
+div#data-container {
   height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-x: hidden; }
-
-#background-image {
   width: 100%;
-  z-index: -1000;
-  overflow-x: hidden;
-  top: 0px; }
-  #background-image > img {
+  z-index: -1000; }
+  div#data-container > img {
     width: 100%; }
-  #background-image > inlay {
+  div#data-container > inlay {
     position: absolute;
     text-align: center;
     display: block;
@@ -80,19 +75,19 @@ div#container {
     transition: color .2s;
     cursor: pointer;
     user-select: none; }
-    #background-image > inlay.active {
+    div#data-container > inlay.active {
       color: #000; }
-    #background-image > inlay:nth-child(3) {
+    div#data-container > inlay:nth-child(3) {
       top: 19.25%; }
-    #background-image > inlay:nth-child(4) {
+    div#data-container > inlay:nth-child(4) {
       top: 32.25%; }
-    #background-image > inlay:nth-child(5) {
+    div#data-container > inlay:nth-child(5) {
       top: 42.5%;
       font-size: 2.8vw; }
-    #background-image > inlay:nth-child(6) {
+    div#data-container > inlay:nth-child(6) {
       top: 50.75%;
       font-size: 2.5vw; }
-    #background-image > inlay:hover {
+    div#data-container > inlay:hover {
       color: #000; }
 
 #stage-container {
@@ -229,7 +224,7 @@ div#locationloader {
   section > h3 {
     font-size: 8vw; }
 
-  #background-image > section {
+  div#data-container > section {
     position: relative;
     top: auto;
     left: auto;
@@ -237,14 +232,14 @@ div#locationloader {
     margin: 20px auto;
     opacity: 1;
     width: 90%; }
-    #background-image > section > * {
+    div#data-container > section > * {
       display: block;
       opacity: 1; }
 
-  #background-image > img {
+  div#data-container > img {
     display: none; }
 
-  #background-image > inlay {
+  div#data-container > inlay {
     display: none; }
 
   .hidden, .fullyhidden, .block, .fullshow {
