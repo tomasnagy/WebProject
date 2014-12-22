@@ -5,7 +5,19 @@ function animateAllTheThings(data) {
 'use strict';
     var items = [],
         i = data.length - 1,
-        resizeStarted = false;
+        resizeStarted = false,
+        backgroundImage = document.querySelector('#data-container > img'),
+        stageContainer = document.getElementById('stage-container'),
+        event = new CustomEvent(
+            "closeItems",
+            {
+                detail: {
+                    source: undefined
+                },
+                bubbles: true,
+                cancelable: true
+            }
+        );
 
     // create all items
     for(i; i >= 0; i--) {
@@ -41,6 +53,17 @@ function animateAllTheThings(data) {
             }
             resizeStarted = true;
         }
+    });
+
+    // close all open sections on click
+    backgroundImage.addEventListener('click', function(e) {
+        if(e.target === this) {
+            e.target.dispatchEvent(event);
+        }
+    });
+
+    stageContainer.addEventListener('click', function(e) {
+        e.target.dispatchEvent(event);
     });
 
     window.resizeStop.bind(stoppedResizing);

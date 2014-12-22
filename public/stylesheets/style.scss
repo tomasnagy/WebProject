@@ -4,7 +4,11 @@ $item-top-2: 19.25%;
 $item-top-3: 32.25%;
 $item-top-4: 42.5%;
 $item-top-5: 50.75%;
-$item-top-6: 19.5%;
+$item-top-6: 60.75%;
+$item-top-7: 69.25%;
+$item-top-8: 74.5%;
+$item-top-9: 79.9%;
+$item-top-10: 85.2%;
 
 // IE fix
 html {
@@ -69,10 +73,31 @@ section {
   overflow: hidden;
 
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     //float:right;
     right: 3%;
     left: auto;
+  }
+
+  &:nth-child(17) {
+    > img {
+      transform: none;
+      margin: 5% auto;
+    }
+  }
+
+  &:nth-child(18) {
+    > img {
+      width: 40%;
+    }
+  }
+
+  &:nth-child(20), &:nth-child(19) {
+    > img {
+      width: 75%;
+      margin: 4% auto;
+      transform: none;
+    }
   }
 
   > h2, h3 {
@@ -91,7 +116,7 @@ section {
 
   > img {
     margin: 0 auto;
-    width: 70%;
+    width: 35%;
     opacity: 0;
     transform: rotate(45deg);
   }
@@ -149,6 +174,36 @@ div#data-container {
     &:nth-child(6) {
       top: $item-top-5;
       font-size: 2.5vw;
+    }
+
+    &:nth-child(7) {
+      top: $item-top-6;
+      left: 44.6%;
+      font-size: 2.5vw;
+    }
+
+    &:nth-child(8) {
+      top: $item-top-7;
+      left: 44.8%;
+      font-size: 2vw;
+    }
+
+    &:nth-child(9) {
+      top: $item-top-8;
+      left: 44.8%;
+      font-size: 2vw;
+    }
+
+    &:nth-child(10) {
+      top: $item-top-9;
+      left: 44.8%;
+      font-size: 2vw;
+    }
+
+    &:nth-child(11) {
+      top: $item-top-10;
+      left: 45%;
+      font-size: 2vw;
     }
 
     &:hover {
@@ -328,11 +383,7 @@ div#locationloader {
   }
 }
 
-@media screen and (max-width: 600px) {
-  header > h1 {
-    font-size: 7vw;
-  }
-
+@media screen and (max-width: 800px) {
   button {
     font-size: 5vw;
     width: 20%;
@@ -341,37 +392,43 @@ div#locationloader {
     margin: 0 auto;
   }
 
-  section > h2 {
-    font-size: 9vw;
+  header > h1 {
+    font-size: 7vw;
   }
 
-  section > h3 {
-    font-size: 8vw;
-  }
-
-  div#data-container  > section {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    margin: 0 auto 4% auto;
-    opacity: 1;
-    width: 90%;
-    &:last-child {
-      margin-bottom: 0;
+  section {
+    > h2 {
+      font-size: 9vw;
     }
-    > * {
-      display: block;
+
+    > h3 {
+      font-size: 8vw;
+    }
+  }
+  div#data-container {
+    > section {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      margin: 0 auto 4% auto;
       opacity: 1;
+      width: 90%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > * {
+        display: block;
+        opacity: 1;
+      }
     }
-  }
 
-  div#data-container  > img {
+    > img {
+      display: none;
+    }
+    > inlay {
     display: none;
-  }
-
-  div#data-container  > inlay {
-    display: none;
+    }
   }
 
   .hidden, .fullyhidden , .block, .fullshow{

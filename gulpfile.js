@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
-    del = require('del');
+    del = require('del'),
+    stripdebug = require('gulp-strip-debug');
 
 // Clean build folder
 gulp.task('clean', function(cb) {
@@ -38,6 +39,7 @@ gulp.task('scss', function() {
 // Minify & concat scripts
 gulp.task('js', function () {
     return gulp.src(['public/javascripts/**/*.js', '!public/javascripts/**/*.min.js'])
+        .pipe(stripdebug())
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(uglify())

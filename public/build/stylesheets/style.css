@@ -48,9 +48,22 @@ section {
   left: 3%;
   top: 4.5%;
   overflow: hidden; }
-  section:nth-child(even) {
+  section:nth-child(odd) {
     right: 3%;
     left: auto; }
+  section:nth-child(17) > img {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin: 5% auto; }
+  section:nth-child(18) > img {
+    width: 40%; }
+  section:nth-child(20) > img, section:nth-child(19) > img {
+    width: 75%;
+    margin: 4% auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
   section > h2, section h3 {
     font-weight: normal;
     text-align: center;
@@ -63,7 +76,7 @@ section {
     font-size: 3vw; }
   section > img {
     margin: 0 auto;
-    width: 70%;
+    width: 35%;
     opacity: 0;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -110,6 +123,26 @@ div#data-container {
     div#data-container > inlay:nth-child(6) {
       top: 50.75%;
       font-size: 2.5vw; }
+    div#data-container > inlay:nth-child(7) {
+      top: 60.75%;
+      left: 44.6%;
+      font-size: 2.5vw; }
+    div#data-container > inlay:nth-child(8) {
+      top: 69.25%;
+      left: 44.8%;
+      font-size: 2vw; }
+    div#data-container > inlay:nth-child(9) {
+      top: 74.5%;
+      left: 44.8%;
+      font-size: 2vw; }
+    div#data-container > inlay:nth-child(10) {
+      top: 79.9%;
+      left: 44.8%;
+      font-size: 2vw; }
+    div#data-container > inlay:nth-child(11) {
+      top: 85.2%;
+      left: 45%;
+      font-size: 2vw; }
     div#data-container > inlay:hover {
       color: #000; }
 
@@ -252,10 +285,7 @@ div#locationloader {
     display: block;
     width: 2%; }
 
-@media screen and (max-width: 600px) {
-  header > h1 {
-    font-size: 7vw; }
-
+@media screen and (max-width: 800px) {
   button {
     font-size: 5vw;
     width: 20%;
@@ -263,9 +293,11 @@ div#locationloader {
     display: block;
     margin: 0 auto; }
 
+  header > h1 {
+    font-size: 7vw; }
+
   section > h2 {
     font-size: 9vw; }
-
   section > h3 {
     font-size: 8vw; }
 
@@ -282,10 +314,8 @@ div#locationloader {
     div#data-container > section > * {
       display: block;
       opacity: 1; }
-
   div#data-container > img {
     display: none; }
-
   div#data-container > inlay {
     display: none; }
 

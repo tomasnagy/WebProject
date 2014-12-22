@@ -67,7 +67,7 @@ HistoryAnimationItem.prototype = {
             );
 
 
-        if(windowWidth <= 600) {
+        if(windowWidth <= 800) {
             // dont calc
             return;
         }
