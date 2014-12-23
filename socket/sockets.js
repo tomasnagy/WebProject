@@ -85,6 +85,7 @@ module.exports = function(server) {
                     }
                 }
             }
+            console.log('leave room');
         });
 
         socket.on('send chord to server', function(data) {

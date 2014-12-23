@@ -19,6 +19,7 @@ var HistoryAnimationItem = function(index, data) {
     this.tl4 = new TimelineLite({paused: 'true'});
     this.tl5 = new TimelineLite({paused: 'true'});
     this.isOpen = false;
+    this.isFirstTime = false;
 };
 
 HistoryAnimationItem.prototype = {
@@ -29,49 +30,21 @@ HistoryAnimationItem.prototype = {
         self.guitarItem.children[2].src = self.data[self.index].Image;
 
         self.guitarItem.children[2].addEventListener('load', function (e) {
+            self.isFirstTime = true;
             self.calculateAnimations();
         }, false);
     },
     calculateAnimations: function() {
         var self = this,
-            windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
-            closeItemsEvent = new CustomEvent(
-                "closeItems",
-                {
-                    detail: {
-                        source: this.index
-                    },
-                    bubbles: true,
-                    cancelable: true
-                }
-            ),
-            fadeOutItemsEvent = new CustomEvent(
-                "fadeOutItems",
-                {
-                    detail: {
-                        source: this.index
-                    },
-                    bubbles: true,
-                    cancelable: true
-                }
-            ),
-            fadeInItemsEvent = new CustomEvent(
-                "fadeInItems",
-                {
-                    detail: {
-                        source: this.index
-                    },
-                    bubbles: true,
-                    cancelable: true
-                }
-            );
+            windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
 
         if(windowWidth <= 800) {
-            // dont calc
+            // don't do unnecessary calculations
             return;
         }
 
+        // Encapsulate this block with timeout of 50ms to fix safari bug...
 
         this.fullHeight = parseInt(window.getComputedStyle(this.guitarItem, null).getPropertyValue('height'));
         console.log("FULLHEIGHT: " + this.fullHeight);
@@ -121,6 +94,45 @@ HistoryAnimationItem.prototype = {
 
         this.tl5.to(this.guitarItem, 0.4, {className: '+=opaqueItem'});
 
+        // only add events initially
+        if(this.isFirstTime) {
+            this.addEvents();
+            this.isFirstTime = false;
+        }
+
+    },
+    addEvents: function() {
+        var self = this,
+            closeItemsEvent = new CustomEvent(
+                "closeItems",
+                {
+                    detail: {
+                        source: this.index
+                    },
+                    bubbles: true,
+                    cancelable: true
+                }
+            ),
+            fadeOutItemsEvent = new CustomEvent(
+                "fadeOutItems",
+                {
+                    detail: {
+                        source: this.index
+                    },
+                    bubbles: true,
+                    cancelable: true
+                }
+            ),
+            fadeInItemsEvent = new CustomEvent(
+                "fadeInItems",
+                {
+                    detail: {
+                        source: this.index
+                    },
+                    bubbles: true,
+                    cancelable: true
+                }
+            );
         // close current item
         document.addEventListener('closeItems', function(e) {
             if(e.detail.source !== self.index) {
@@ -189,29 +201,8 @@ HistoryAnimationItem.prototype = {
     },
     reset: function() {
         var i = this.guitarItem.children.length - 1,
-            tempItem,
             currentItem;
 
-        this.tl1.invalidate();
-        this.tl2.invalidate();
-        this.tl3.invalidate();
-        this.tl4.invalidate();
-        this.tl5.invalidate();
-        this.tl1.pause(0, true);
-        this.tl2.pause(0, true);
-        this.tl3.pause(0, true);
-        this.tl4.pause(0, true);
-        this.tl5.pause(0, true);
-        this.tl1.kill();
-        this.tl2.kill();
-        this.tl3.kill();
-        this.tl4.kill();
-        this.tl5.kill();
-        this.tl1 = null;
-        this.tl2 = null;
-        this.tl3 = null;
-        this.tl4 = null;
-        this.tl5 = null;
         this.tl1 = new TimelineLite({paused: 'true'});
         this.tl2 = new TimelineLite({paused: 'true'});
         this.tl3 = new TimelineLite({paused: 'true'});
@@ -221,16 +212,10 @@ HistoryAnimationItem.prototype = {
         this.fullHeight = 0;
         this.smallHeight = 0;
 
-        // remove class + remove events
+        // remove class & styles
         this.guitarItem.removeAttribute('class');
         this.guitarItem.removeAttribute('style');
-        tempItem = this.guitarItem.cloneNode(true);
-        this.guitarItem.parentNode.replaceChild(tempItem, this.guitarItem);
-        this.guitarItem = tempItem;
 
-        tempItem = this.year.cloneNode(true);
-        this.year.parentNode.replaceChild(tempItem, this.year);
-        this.year = tempItem;
         if (this.year.children[0].classList) {
             this.year.children[0].classList.remove('active');
         }
@@ -242,12 +227,9 @@ HistoryAnimationItem.prototype = {
             currentItem = this.guitarItem.children[i];
             currentItem.removeAttribute('class');
             currentItem.removeAttribute('style');
-            tempItem = currentItem.cloneNode(true);
-            currentItem.parentNode.replaceChild(tempItem, currentItem);
         }
 
-        this.mainData = [this.guitarItem.children[0], this.guitarItem.children[1]];
-        this.extraData = [this.guitarItem.children[2], this.guitarItem.children[3]];
+        // reset necessary animation data
         this.i = this.mainData.length - 1;
         this.j = this.extraData.length - 1;
         this.isOpen = false;
