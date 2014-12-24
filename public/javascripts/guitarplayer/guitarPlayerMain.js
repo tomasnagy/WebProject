@@ -1,9 +1,9 @@
 /**
  * Created by tomasnagy on 11/12/14.
  */
-function GuitarPlayerController() {
+function guitarPlayerController() {
     'use strict';
-    var socket = io.connect(),
+    var socket,
         id,
         room,
         user,
@@ -18,42 +18,49 @@ function GuitarPlayerController() {
         mainGuitar = document.querySelector('#stage-container>figure'),
         supportGuitars = document.getElementById('support-guitars');
 
-    // request a key
-    socket.emit('requestkey');
-    // get key
-    socket.on('getkey', function(data) {
-        // save id + join room
-        id = data;
-        console.log(id.name);
-        getLocation(function(location) {
-            socket.emit('join room', {key: data, location: location});
-            socket.on('current room', function(data) {
-                room = data.room;
-                user = data.user;
+    if(navigator.onLine) {
+        socket = io.connect();
+        // request a key
+        socket.emit('requestkey');
+        // get key
+        socket.on('getkey', function (data) {
+            // save id + join room
+            id = data;
+            console.log(id.name);
+            getLocation(function (location) {
+                socket.emit('join room', {key: data, location: location});
+                socket.on('current room', function (data) {
+                    room = data.room;
+                    user = data.user;
 
-                // show guitar + remove preloader
-                TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
-                TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
+                    // show guitar + remove preloader
+                    TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
+                    TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
 
 
-                // load appropriate guitar
-                loadGuitar(socket, user, room.name);
+                    // load appropriate guitar
+                    loadGuitar(socket, user, room.name);
 
-                // show guitars from other users
-                showBackgroundGuitars(room.users, user.name);
+                    // show guitars from other users
+                    showBackgroundGuitars(room.users, user.name);
 
-                // load guitar sounds once
-                supportguitars = loadSupportGuitarsSound(user.guitar);
+                    // load guitar sounds once
+                    supportguitars = loadSupportGuitarsSound(user.guitar);
 
-                socket.on('play chord', playChordHandler);
+                    socket.on('play chord', playChordHandler);
 
-                socket.on('user count changed', function(data) {
-                    // redraw support guitars when new user joins or an existing user leaves
-                    showBackgroundGuitars(data, user.name);
-               });
+                    socket.on('user count changed', function (data) {
+                        // redraw support guitars when new user joins or an existing user leaves
+                        showBackgroundGuitars(data, user.name);
+                    });
+                });
             });
         });
-    });
+    } else {
+        TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
+        TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
+        loadGuitar(socket, {name: 'offlineUser', guitar: 'cheap'}, 'offlineRoom');
+    }
 
     // close browser -> leave room
     window.addEventListener('beforeunload', function() {
@@ -99,7 +106,9 @@ function loadGuitar(socket, user, roomName) {
             timer = setTimeout(function() {
                 setAllFretsInactive();
             }, 7000);
-            socket.emit('send chord to server', { roomName: roomName, user: user, chord: 1 } );
+            if(socket !== undefined) {
+                socket.emit('send chord to server', {roomName: roomName, user: user, chord: 1});
+            }
         },
         playChord2 = function(isKey) {
             if(isKey) {
@@ -116,7 +125,9 @@ function loadGuitar(socket, user, roomName) {
             timer = setTimeout(function() {
                 setAllFretsInactive();
             }, 7000);
-            socket.emit('send chord to server', { roomName: roomName, user: user, chord: 2 } );
+            if(socket !== undefined) {
+                socket.emit('send chord to server', {roomName: roomName, user: user, chord: 2});
+            }
         },
         playChord3 = function(isKey) {
             if(isKey) {
@@ -133,7 +144,9 @@ function loadGuitar(socket, user, roomName) {
             timer = setTimeout(function() {
                 setAllFretsInactive();
             }, 7000);
-            socket.emit('send chord to server', { roomName: roomName, user: user, chord: 3 } );
+            if(socket !== undefined) {
+                socket.emit('send chord to server', {roomName: roomName, user: user, chord: 3});
+            }
         },
         playChord4 = function(isKey) {
             if(isKey) {
@@ -150,11 +163,13 @@ function loadGuitar(socket, user, roomName) {
             timer = setTimeout(function() {
                 setAllFretsInactive();
             }, 7000);
-            socket.emit('send chord to server', { roomName: roomName, user: user, chord: 4 } );
+            if(socket !== undefined) {
+                socket.emit('send chord to server', {roomName: roomName, user: user, chord: 4});
+            }
         };
 
     // load guitar
-    guitarImage.src = "/images/guitars/" + user.guitar +".svg";
+    guitarImage.src = "/build/images/guitars/" + user.guitar +".svg";
 
     // add handlers
     chord1.addEventListener('mouseenter', function(e) {
@@ -228,7 +243,7 @@ function showBackgroundGuitars(users, currentUser) {
             var result = '';
             if(location.length > 17) {
                 result = location.substring(0, 17);
-                result += "..."
+                result += "...";
                 return result.trim();
             } else {
                 return location.trim();

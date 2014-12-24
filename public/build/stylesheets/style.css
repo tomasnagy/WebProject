@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Tangerine);
 html {
   position: relative;
   z-index: -2000; }
@@ -123,33 +122,33 @@ div#data-container {
     div#data-container > inlay.active {
       color: #000; }
     div#data-container > inlay:nth-child(3) {
-      top: 32.55%; }
+      top: 32.4%; }
     div#data-container > inlay:nth-child(4) {
-      top: 43.35%; }
+      top: 43.15%; }
     div#data-container > inlay:nth-child(5) {
-      top: 52%;
+      top: 51.85%;
       font-size: 2.8vw; }
     div#data-container > inlay:nth-child(6) {
-      top: 58.85%;
+      top: 58.65%;
       font-size: 2.5vw; }
     div#data-container > inlay:nth-child(7) {
-      top: 67.25%;
+      top: 67%;
       left: 44.6%;
       font-size: 2.5vw; }
     div#data-container > inlay:nth-child(8) {
-      top: 74.25%;
-      left: 44.8%;
+      top: 74.1%;
+      left: 45%;
       font-size: 2vw; }
     div#data-container > inlay:nth-child(9) {
-      top: 78.7%;
-      left: 44.8%;
+      top: 78.5%;
+      left: 45%;
       font-size: 2vw; }
     div#data-container > inlay:nth-child(10) {
-      top: 83.1%;
-      left: 44.8%;
+      top: 82.95%;
+      left: 45%;
       font-size: 2vw; }
     div#data-container > inlay:nth-child(11) {
-      top: 87.6%;
+      top: 87.35%;
       left: 45%;
       font-size: 2vw; }
     div#data-container > inlay:hover {
@@ -165,6 +164,14 @@ div#stage-container {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+  div#stage-container > p {
+    font-size: 2vw;
+    color: #fff;
+    position: absolute;
+    bottom: 1%;
+    width: 32%;
+    left: 34%;
+    font-family: Tangerine; }
   div#stage-container > div {
     z-index: 100;
     width: 100%;
@@ -241,6 +248,23 @@ div#stage-container {
     float: none;
     z-index: 1000; }
 
+div#locationloader {
+  position: absolute;
+  margin-top: 35%;
+  height: 20%;
+  width: 100%;
+  color: #fff;
+  padding: 0; }
+  div#locationloader > * {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2vw;
+    font-family: Tangerine; }
+  div#locationloader > img {
+    display: block;
+    width: 2%;
+    margin: 1% auto; }
+
 .active {
   color: #000; }
 
@@ -282,22 +306,6 @@ div#stage-container {
 
 .invisible {
   opacity: 0; }
-
-div#locationloader {
-  position: absolute;
-  margin-top: 35%;
-  height: 20%;
-  width: 100%;
-  color: #fff;
-  padding: 0; }
-  div#locationloader > * {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2vw;
-    font-family: Tangerine; }
-  div#locationloader > img {
-    display: block;
-    width: 2%; }
 
 @media screen and (max-width: 800px) {
   button {
@@ -346,6 +354,8 @@ div#locationloader {
 
   div#stage-container {
     margin-top: -5%; }
+    div#stage-container > p {
+      display: none; }
     div#stage-container > figure {
       width: 83%;
       left: 10%;

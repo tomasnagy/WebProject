@@ -1,7 +1,7 @@
 /**
  * Created by tomasnagy on 30/11/14.
  */
-function animateAllTheThings(data) {
+function startAnimations(data) {
 'use strict';
     var items = [],
         i = data.length - 1,

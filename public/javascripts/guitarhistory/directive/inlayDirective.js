@@ -8,6 +8,6 @@
        return {
            restrict: 'E',
            templateUrl: 'directives/inlay'
-       }
+       };
     });
 })();
