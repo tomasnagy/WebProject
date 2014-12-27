@@ -4,12 +4,13 @@
 (function() {
     'use strict';
     var HistoryItemController = function($scope, $http, $timeout) {
+        var isServerDown = false;
         $scope.items = [];
 
         $scope.layoutDone = function() {
             $timeout(function() {
                 startAnimations($scope.items);
-                guitarPlayerController();
+                guitarPlayerController(isServerDown);
             }, 0);
         };
 
@@ -23,6 +24,9 @@
                 });
             },
             onError = function(err) {
+                // server down or no internet connection
+                isServerDown = true;
+
                 // get data from local storage
                 var res = JSON.parse(localStorage.getItem('guitarHistoryData'));
 

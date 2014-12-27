@@ -1,7 +1,7 @@
 /**
  * Created by tomasnagy on 11/12/14.
  */
-function guitarPlayerController() {
+function guitarPlayerController(isServerDown) {
     'use strict';
     var socket,
         id,
@@ -18,7 +18,7 @@ function guitarPlayerController() {
         mainGuitar = document.querySelector('#stage-container>figure'),
         supportGuitars = document.getElementById('support-guitars');
 
-    if(navigator.onLine) {
+    if(!isServerDown) {
         socket = io.connect();
         // request a key
         socket.emit('requestkey');
@@ -57,6 +57,7 @@ function guitarPlayerController() {
             });
         });
     } else {
+        // server down or no internet connection => enable 1 guitar
         TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
         TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
         loadGuitar(socket, {name: 'offlineUser', guitar: 'cheap'}, 'offlineRoom');
