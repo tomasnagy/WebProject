@@ -4,10 +4,10 @@
 var test = require('tape');
 var randomgenerator = require('../util/randomgenerator');
 
-test('100000 random ID\'s', function (t) {
-    var i = 99999,
+test('10000 random ID\'s', function (t) {
+    var i = 9999,
         allIDs = [];
-    t.plan(100000);
+    t.plan(10000);
     for(i; i >= 0; i--) {
         randomgenerator.getRandomID(10, function(random) {
             t.equal(allIDs.indexOf(random), -1, 'should be unique');
@@ -16,7 +16,7 @@ test('100000 random ID\'s', function (t) {
     }
 });
 
-test('does a random contain only valid chars', function(t) {
+test('a random contains only valid chars', function(t) {
     randomgenerator.getRandomID(200, function(random) {
         var validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
             i = random.length - 1;

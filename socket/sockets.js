@@ -18,50 +18,56 @@ module.exports = function(server) {
 
         socket.on('join room' , function(data) {
            // check if rooms exist
-            console.log('ID: ' + data);
             if(rooms.length === 0) {
 
                 // create firstroom
-                generator.getRandomID(5, function(id) {
+                generator.getRandomID(10, function(id) {
                     room = new Room(id);
+                    console.log("First room created: " + room.Name);
                     room.addUser(new User(data.key, data.location));
                     rooms.push(room);
                     socket.join(room.Name);
 
                     var user = room.getUserById(data.key);
 
+                    console.log("User: " + user.Name + " joined room: " + room.Name);
                     socket.emit('current room', {room: room, user: user });
                 });
             } else {
                 // find rooms with space
-                // normal loop to start from beginning & add users to oldest rooms
-                var i = 0,
-                    l = rooms.length,
-                    emptyFound = false;
-                for(i; i < l; i++) {
-                    if(rooms[i].Users.length < 4) {
-                        // user to room
-                        rooms[i].addUser(new User(data.key, data.location));
-                        socket.join(rooms[i].Name);
+                var indexOfAvailableRoom = rooms.map(function(e) {
+                    // returns 0 when full 1 when space left
+                    return (e.Users.length < 4) ? 1 : 0;
+                    // get index of rooms that has space -> returns 1
+                }).indexOf(1);
 
-                        // get users after join to get updated user object
-                        var user = rooms[i].getUserById(data.key);
+                if(indexOfAvailableRoom !== -1) {
+                    // room found
+                    var room = rooms[indexOfAvailableRoom];
+                    room.addUser(new User(data.key, data.location));
+                    socket.join(room.Name);
 
-                        socket.emit('current room', { room: rooms[i], user: user });
-                        io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
-                        emptyFound = true;
-                        break;
-                    }
-                }
+                    // get users after join to get updated user object
+                    var user = room.getUserById(data.key);
 
-                if(emptyFound === false) {
-                    // no space found create new room
-                    generator.getRandomID(5, function(id) {
+                    console.log('User: ' + user.Name + ' joined existing room: ' + room.Name);
+
+                    socket.emit('current room', { room: room, user: user });
+                    io.to(room.Name).emit('user count changed', room.Users);
+
+                } else {
+                    // no space found in existing rooms --> create new room
+                    generator.getRandomID(10, function(id) {
                         var room = new Room(id);
                         room.addUser(new User(data.key, data.location));
                         socket.join(room.Name);
 
+                        console.log('New room created: ' + room.Name);
+
                         var user = room.getUserById(data.key);
+
+                        console.log('User: ' + user.Name + ' joined new room: ' + room.Name);
+
                         socket.emit('current room', { room: room, user: user });
                         rooms.push(room);
                     });
@@ -70,22 +76,25 @@ module.exports = function(server) {
         });
 
         socket.on('leave room', function(data) {
-            // find room
-            var i = rooms.length - 1;
-            for(i; i >= 0; i--) {
-                if(rooms[i].Name === data.name) {
-                    // remove user from room
-                    rooms[i].removeUser(rooms[i].getUserById(data.user.name));
+            // get index of room
+            var indexOfRoom = rooms.map(function(e) {
+                return e.Name;
+            }).indexOf(data.name);
 
-                    // if no users left delete room
-                    if(rooms[i].Users.length === 0) {
-                        rooms.splice(i, 1);
-                    } else {
-                        io.to(rooms[i].Name).emit('user count changed', rooms[i].Users);
-                    }
+            // remove user from room
+            if(indexOfRoom !== -1) {
+                var room = rooms[indexOfRoom];
+                room.removeUser(room.getUserById(data.user.name));
+                console.log('User: ' + data.user.name + ' left room: ' + room.Name);
+                if(room.Users.length === 0) {
+                    // room empty -> remove room
+                    console.log('Room: ' + room.Name + ' removed.');
+                    rooms.splice(indexOfRoom, 1);
+                } else {
+                    // send updated room info to all users in room
+                    io.to(room.Name).emit('user count changed', room.Users);
                 }
             }
-            console.log('leave room');
         });
 
         socket.on('send chord to server', function(data) {
