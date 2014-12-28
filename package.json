@@ -4,7 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "test": "node node_modules/faucet/bin/cmd"
+    "test": "node node_modules/tape/bin/tape test/*.js | node node_modules/faucet/bin/cmd"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
