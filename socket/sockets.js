@@ -3,6 +3,7 @@
  */
 module.exports = function(server) {
     var io = require('socket.io').listen(server),
+        colors = require('colors'),
         generator = require('../util/randomgenerator'),
         Room = require('../models/Room'),
         User = require('../models/User'),
@@ -23,14 +24,14 @@ module.exports = function(server) {
                 // create firstroom
                 generator.getRandomID(10, function(id) {
                     room = new Room(id);
-                    console.log("First room created: " + room.Name);
+                    console.log("First room created: " + room.Name.underline.green);
                     room.addUser(new User(data.key, data.location));
                     rooms.push(room);
                     socket.join(room.Name);
 
                     var user = room.getUserById(data.key);
 
-                    console.log("User: " + user.Name + " joined room: " + room.Name);
+                    console.log("User: " + user.Name.underline.green + " joined room: " + room.Name.underline.green);
                     socket.emit('current room', {room: room, user: user });
                 });
             } else {
@@ -50,7 +51,7 @@ module.exports = function(server) {
                     // get users after join to get updated user object
                     var user = room.getUserById(data.key);
 
-                    console.log('User: ' + user.Name + ' joined existing room: ' + room.Name);
+                    console.log('User: ' + user.Name.underline.green + ' joined existing room: ' + room.Name.underline.green + ' current user count: ' + room.Users.length.toString().blue);
 
                     socket.emit('current room', { room: room, user: user });
                     io.to(room.Name).emit('user count changed', room.Users);
@@ -62,7 +63,7 @@ module.exports = function(server) {
                         room.addUser(new User(data.key, data.location));
                         socket.join(room.Name);
 
-                        console.log('New room created: ' + room.Name);
+                        console.log('New room created: ' + room.Name.underline.green + ', existing room count: ' + rooms.length.toString().blue);
 
                         var user = room.getUserById(data.key);
 
@@ -85,11 +86,11 @@ module.exports = function(server) {
             if(indexOfRoom !== -1) {
                 var room = rooms[indexOfRoom];
                 room.removeUser(room.getUserById(data.user.name));
-                console.log('User: ' + data.user.name + ' left room: ' + room.Name);
+                console.log('User: ' + data.user.name.underline.red + ' left room: ' + room.Name.underline.green + ' current user count: ' + room.Users.length.toString().blue);
                 if(room.Users.length === 0) {
                     // room empty -> remove room
-                    console.log('Room: ' + room.Name + ' removed.');
                     rooms.splice(indexOfRoom, 1);
+                    console.log('Room: ' + room.Name.underline.red + ' removed, existing room count: ' + rooms.length.toString().blue);
                 } else {
                     // send updated room info to all users in room
                     io.to(room.Name).emit('user count changed', room.Users);

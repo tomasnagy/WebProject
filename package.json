@@ -18,6 +18,7 @@
     "socket.io": "^1.2.1"
   },
   "devDependencies": {
+    "colors": "^1.0.3",
     "del": "^1.1.0",
     "faucet": "0.0.1",
     "gulp": "^3.8.10",
