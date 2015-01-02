@@ -4,8 +4,16 @@
 'use strict';
 module.exports = (function() {
     var mongoose = require('mongoose'),
-        mongodbURL = 'mongodb://localhost/guitarHistory',
-        db = mongoose.connect(mongodbURL);
+        mongodbURL = process.env.CUSTOMCONNSTR_MONGOLAB_URI,
+        db;
+
+    // use local when online not available;
+    if(mongodbURL === undefined || mongodbURL === '' || mongodbURL === null) {
+        mongodbURL = 'mongodb://localhost/guitarHistory';
+    }
+
+    db = mongoose.connect(mongodbURL);
+
     mongoose.connection.on('open', function() {
         console.log('Connection with Mongo server at:', mongodbURL);
         mongoose.connection.db.collectionNames(function(err, names) {
