@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "main": "app.js",
+  "engine": "node 0.10.33",
   "scripts": {
-    "test": "node node_modules/tape/bin/tape test/*.js | node node_modules/faucet/bin/cmd"
+    "test": "node node_modules/tape/bin/tape test/*.js | node node_modules/faucet/bin/cmd",
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
