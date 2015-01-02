@@ -4,7 +4,6 @@
 function guitarPlayerController(isServerDown) {
     'use strict';
     var socket,
-        id,
         room,
         user,
         supportguitars = [],
@@ -20,59 +19,42 @@ function guitarPlayerController(isServerDown) {
 
     if(!isServerDown) {
         socket = io.connect();
-        // request a key
-        socket.emit('requestkey');
-        // get key
-        socket.on('getkey', function (data) {
-            // save id + join room
-            id = data;
-            console.log(id.name);
-            getLocation(function (location) {
-                socket.emit('join room', {key: data, location: location});
-                socket.on('current room', function (data) {
-                    room = data.room;
-                    user = data.user;
 
-                    // show guitar + remove preloader
-                    TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
-                    TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
+        // get location -> join room
+       // getLocation(function (location) {
+            socket.emit('join room', 'load test');
+            socket.on('current room', function (data) {
+                room = data.room;
+                user = data.user;
+
+                // show guitar + remove preloader
+                TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
+                TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
 
 
-                    // load appropriate guitar
-                    loadGuitar(socket, user, room.name);
+                // load appropriate guitar
+                loadGuitar(socket, user, room.name);
 
-                    // show guitars from other users
-                    showBackgroundGuitars(room.users, user.name);
+                // show guitars from other users
+                showBackgroundGuitars(room.users, user.name);
 
-                    // load guitar sounds once
-                    supportguitars = loadSupportGuitarsSound(user.guitar);
+                // load guitar sounds once
+                supportguitars = loadSupportGuitarsSound(user.guitar);
 
-                    socket.on('play chord', playChordHandler);
+                socket.on('play chord', playChordHandler);
 
-                    socket.on('user count changed', function (data) {
-                        // redraw support guitars when new user joins or an existing user leaves
-                        showBackgroundGuitars(data, user.name);
-                    });
+                socket.on('user count changed', function (data) {
+                    // redraw support guitars when new user joins or an existing user leaves
+                    showBackgroundGuitars(data, user.name);
                 });
             });
-        });
+        //});
     } else {
         // server down or no internet connection => enable 1 guitar
         TweenLite.to(locationLoader, 0.2, {className: 'invisible'});
         TweenLite.to([mainGuitar, supportGuitars], 0.2, {delay: 0.2, className: '-=invisible'});
         loadGuitar(socket, {name: 'offlineUser', guitar: 'cheap'}, 'offlineRoom');
     }
-
-    // close browser -> leave room
-    window.addEventListener('beforeunload', function() {
-        // check if user has joined room, then leave room, else do nothing
-        if(room !== undefined) {
-            socket.emit('leave room', {name: room.name, user: user});
-        }
-       // return null;
-    });
-
-
 }
 
 
