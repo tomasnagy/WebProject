@@ -21,8 +21,8 @@ function guitarPlayerController(isServerDown) {
         socket = io.connect();
 
         // get location -> join room
-       // getLocation(function (location) {
-            socket.emit('join room', 'load test');
+        getLocation(function (location) {
+            socket.emit('join room', location);
             socket.on('current room', function (data) {
                 room = data.room;
                 user = data.user;
@@ -48,7 +48,7 @@ function guitarPlayerController(isServerDown) {
                     showBackgroundGuitars(data, user.name);
                 });
             });
-        //});
+        });
     } else {
         // server down or no internet connection => enable 1 guitar
         TweenLite.to(locationLoader, 0.2, {className: 'invisible'});

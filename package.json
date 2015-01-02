@@ -1,6 +1,6 @@
 {
-  "name": "WebProjectFinal",
-  "version": "0.0.0",
+  "name": "History of Electric Guitar",
+  "version": "0.1.0",
   "private": true,
   "main": "app.js",
   "scripts": {
