@@ -3,7 +3,7 @@
  */
 module.exports = function(server) {
     var io = require('socket.io')({
-            'transport': ['xhr-polling'],
+            'transport': ['websocket', 'xhr-polling'],
             'polling duration': 10
         }).listen(server),
         colors = require('colors'),
