@@ -2,15 +2,13 @@
  * Created by tomasnagy on 11/12/14.
  */
 module.exports = function(server) {
-    var io = require('socket.io')({
-            'transport': ['websocket', 'xhr-polling'],
-            'polling duration': 10
-        }).listen(server),
+    var io = require('socket.io').listen(server),
         colors = require('colors'),
         generator = require('../util/randomgenerator'),
         Room = require('../models/Room'),
         User = require('../models/User'),
         rooms = [];
+
 
     io.on('connection', function(socket) {
 
