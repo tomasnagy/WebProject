@@ -18,7 +18,7 @@ function guitarPlayerController(isServerDown) {
         supportGuitars = document.getElementById('support-guitars');
 
     if(!isServerDown) {
-        socket = io.connect(window.location.host);
+        socket = io.connect();
 
         // get location -> join room
         getLocation(function (location) {
