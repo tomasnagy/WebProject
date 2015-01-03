@@ -2,7 +2,9 @@
  * Created by tomasnagy on 11/12/14.
  */
 module.exports = function(server) {
-    var io = require('socket.io').listen(server),
+    var io = require('socket.io')({
+            'transports': ['websockets', 'xhr-polling']
+        }).listen(server),
         colors = require('colors'),
         generator = require('../util/randomgenerator'),
         Room = require('../models/Room'),
