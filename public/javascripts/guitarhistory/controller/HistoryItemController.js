@@ -39,7 +39,7 @@
                 }
             };
 
-        $http.get('http://' + window.location.host + '/api/allData').then(onDataDownloaded, onError);
+        $http.get(window.location.protocol + '//' + window.location.host + '/api/allData').then(onDataDownloaded, onError);
 
 
     };
