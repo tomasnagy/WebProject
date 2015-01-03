@@ -18,7 +18,7 @@ function guitarPlayerController(isServerDown) {
         supportGuitars = document.getElementById('support-guitars');
 
     if(!isServerDown) {
-        socket = io.connect({ 'sync disconnect on unload': true });
+        socket = io.connect();
 
         // get location -> join room
         getLocation(function (location) {
@@ -49,6 +49,12 @@ function guitarPlayerController(isServerDown) {
                 });
             });
         });
+
+        window.addEventListener('beforeunload', function() {
+            // force socket disconnect
+            socket.disconnect();
+        });
+
     } else {
         // server down or no internet connection => enable 1 guitar
         TweenLite.to(locationLoader, 0.2, {className: 'invisible'});

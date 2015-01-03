@@ -9,7 +9,6 @@ module.exports = function(server) {
         User = require('../models/User'),
         rooms = [];
 
-
     io.on('connection', function(socket) {
 
         socket.on('join room' , function(location) {
@@ -77,7 +76,7 @@ module.exports = function(server) {
            io.to(data.roomName).emit('play chord', {user: data.user, chord: data.chord});
         });
 
-        socket.on('disconnect',  function() {
+        socket.on('disconnect', function() {
             if(socket.room !== undefined && socket.room !== null) {
 
                 var indexOfRoom = rooms.map(function(e) {
@@ -101,5 +100,5 @@ module.exports = function(server) {
                 }
             }
         });
-    });
+   });
 };
