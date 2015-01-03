@@ -2,7 +2,7 @@ CACHE MANIFEST
 
 /
 /directives/inlay
-http://fonts.googleapis.com/css?family=Tangerine
+https://fonts.googleapis.com/css?family=Tangerine
 build/images/bg4.svg
 build/images/deep-purple.jpg
 build/images/fender-broadcaster.png
@@ -19,11 +19,11 @@ build/images/thelog.png
 build/images/guitars/cheap.svg
 stylesheets/normalize.css
 build/stylesheets/style.min.css
-http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js
+https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js
 https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js
-http://code.createjs.com/soundjs-0.5.2.min.js
+https://code.createjs.com/soundjs-0.5.2.min.js
 https://cdn.socket.io/socket.io-1.2.1.js
-http://maps.googleapis.com/maps/api/js?sensor=false
+https://maps.googleapis.com/maps/api/js?sensor=false
 build/javascript/app.min.js
 sounds/CheapStudio/chord1CheapStudio.mp3
 sounds/CheapStudio/chord2CheapStudio.mp3

@@ -38,31 +38,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2" vertical-offset="0" max-vertical-offset="1312">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.25486726" vertical-offset="528" max-vertical-offset="1248">
+              <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guitarPlayerMain.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manifest.appcache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/manifest.appcache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guitarPlayerMain.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/guitarplayer/guitarPlayerMain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46101695" vertical-offset="48" max-vertical-offset="5248">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5248">
               <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Room.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Room.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="1024">
-              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -168,7 +168,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/guitarplayer/GuitarPlayerController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/animations.js" />
         <option value="$PROJECT_DIR$/public/cache/manifest.appcache" />
-        <option value="$PROJECT_DIR$/public/manifest.appcache" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/util/randomgenerator.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
@@ -182,10 +181,11 @@
         <option value="$PROJECT_DIR$/ISSNode.yml" />
         <option value="$PROJECT_DIR$/routes/api.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/controller/HistoryItemController.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/web.config" />
         <option value="$PROJECT_DIR$/socket/sockets.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarplayer/guitarPlayerMain.js" />
+        <option value="$PROJECT_DIR$/public/manifest.appcache" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -509,7 +509,7 @@
       <recent name="$PROJECT_DIR$/public/javascripts/guitarhistory/animation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.default">
+  <component name="RunManager" selected="Gulp.js.js">
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
@@ -609,8 +609,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.js" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.js" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
         <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
         <item index="3" class="java.lang.String" itemvalue="Gulp.js.scss" />
         <item index="4" class="java.lang.String" itemvalue="Gulp.js.images" />
@@ -956,13 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/manifest.appcache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
@@ -1095,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2" vertical-offset="0" max-vertical-offset="1312">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web.config">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="608">
@@ -1129,8 +1114,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/guitarplayer/guitarPlayerMain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46101695" vertical-offset="48" max-vertical-offset="5248">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5248">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.appcache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25486726" vertical-offset="528" max-vertical-offset="1248">
+          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
           <folding />
         </state>
       </provider>
