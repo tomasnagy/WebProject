@@ -3,8 +3,7 @@
  */
 module.exports = function(server) {
     var io = require('socket.io')({
-            'transport': ['websocket', 'xhr-polling'],
-            'polling duration': 10
+            'sync disconnect on unload': true
         }).listen(server),
         colors = require('colors'),
         generator = require('../util/randomgenerator'),
