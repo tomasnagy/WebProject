@@ -16,7 +16,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     del = require('del'),
-    stripdebug = require('gulp-strip-debug');
+    stripdebug = require('gulp-strip-debug'),
+    scsslint = require('gulp-scss-lint');
 
 // Clean build folder
 gulp.task('clean', function(cb) {
@@ -26,6 +27,7 @@ gulp.task('clean', function(cb) {
 // Compile sass, auto prefix & minify css
 gulp.task('scss', function() {
     return gulp.src('public/stylesheets/style.scss')
+        .pipe(scsslint())
         .pipe(sass({ "sourcemap=none": true }))
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))

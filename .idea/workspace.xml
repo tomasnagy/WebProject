@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/public/stylesheets/style.scss" line="427" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/public/stylesheets/style.scss" line="439" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdcdee32-40bd-453b-b8c5-815c43ad131e" name="Default" comment="" />
@@ -38,11 +38,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25486726" vertical-offset="528" max-vertical-offset="1248">
-              <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+            <state vertical-scroll-proportion="-43.52" vertical-offset="0" max-vertical-offset="1248">
+              <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38754326" vertical-offset="48" max-vertical-offset="1280">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-81.51923" vertical-offset="721" max-vertical-offset="8624">
+              <caret line="310" column="7" selection-start-line="310" selection-start-column="7" selection-end-line="310" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -81,38 +101,18 @@
       <file leaf-file-name="app.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/javascript/app.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.111111" vertical-offset="0" max-vertical-offset="288">
-              <caret line="12" column="359" selection-start-line="12" selection-start-column="359" selection-end-line="12" selection-end-column="359" />
+            <state vertical-scroll-proportion="-4.148148" vertical-offset="0" max-vertical-offset="288">
+              <caret line="7" column="2306" selection-start-line="7" selection-start-column="2306" selection-end-line="7" selection-end-column="2306" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <file leaf-file-name="HistoryAnimationItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/animation/HistoryAnimationItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectDB.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/connectDB.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="624">
-              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HistoryItemController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/controller/HistoryItemController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="848">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="3888">
+              <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -139,7 +139,7 @@
     <layout place="tools.popup">
       <scroll-view-position x="0" y="0" />
       <selected-nodes>
-        <selected-node file="$PROJECT_DIR$/gulpfile.js" task="default" />
+        <selected-node file="$PROJECT_DIR$/gulpfile.js" task="scss" />
       </selected-nodes>
     </layout>
   </component>
@@ -157,10 +157,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/directives.js" />
         <option value="$PROJECT_DIR$/public/build/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/public/javascripts/animations.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/model/GuitarHistoryItem.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/animation/HistoryAnimationItem.js" />
         <option value="$PROJECT_DIR$/public/javascripts/location/LocationController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/directive/inlayDirective.js" />
         <option value="$PROJECT_DIR$/public/javascripts/util/smoothScroll.js" />
@@ -168,7 +166,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/guitarplayer/GuitarPlayerController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/animations.js" />
         <option value="$PROJECT_DIR$/public/cache/manifest.appcache" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/util/randomgenerator.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
         <option value="$PROJECT_DIR$/test/apiTest.js" />
@@ -186,6 +183,10 @@
         <option value="$PROJECT_DIR$/public/javascripts/guitarplayer/guitarPlayerMain.js" />
         <option value="$PROJECT_DIR$/public/manifest.appcache" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/public/build/javascript/app.min.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/guitarhistory/animation/HistoryAnimationItem.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -314,6 +315,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebProjectFinal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebProjectFinal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,7 +528,7 @@
       <recent name="$PROJECT_DIR$/public/javascripts/guitarhistory/animation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.js">
+  <component name="RunManager" selected="Gulp.js.scss">
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
@@ -609,10 +628,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.js" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
-        <item index="3" class="java.lang.String" itemvalue="Gulp.js.scss" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.scss" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="3" class="java.lang.String" itemvalue="Gulp.js.js" />
         <item index="4" class="java.lang.String" itemvalue="Gulp.js.images" />
       </list>
     </recent_temporary>
@@ -655,7 +674,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37449393" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37449393" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16497976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4534413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -666,10 +686,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33802083" sideWeight="0.6902834" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38663968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38663968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16497976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -854,87 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/animation/HistoryAnimationItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="3888">
-          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.96" vertical-offset="432" max-vertical-offset="3568">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#201#244#0" expanded="false" />
-            <element signature="e#251#1006#0" expanded="false" />
-            <element signature="e#1015#1250#0" expanded="false" />
-            <element signature="e#1191#1212#0" expanded="false" />
-            <element signature="e#1223#1248#0" expanded="false" />
-            <element signature="e#1283#1393#0" expanded="false" />
-            <element signature="e#1617#1672#0" expanded="false" />
-            <element signature="e#1692#1761#0" expanded="false" />
-            <element signature="e#1704#1757#0" expanded="false" />
-            <element signature="e#1781#1822#0" expanded="false" />
-            <element signature="e#1793#1818#0" expanded="false" />
-            <element signature="e#1859#1946#0" expanded="false" />
-            <element signature="e#1871#1942#0" expanded="false" />
-            <element signature="e#2077#2102#0" expanded="false" />
-            <element signature="e#2110#2135#0" expanded="false" />
-            <element signature="e#2301#2330#0" expanded="false" />
-            <element signature="e#2351#3596#0" expanded="false" />
-            <element signature="e#2806#2832#0" expanded="false" />
-            <element signature="e#2853#2884#0" expanded="false" />
-            <element signature="e#2905#2936#0" expanded="false" />
-            <element signature="e#2957#3012#0" expanded="false" />
-            <element signature="e#3033#3088#0" expanded="false" />
-            <element signature="e#3109#3183#0" expanded="false" />
-            <element signature="e#3564#3590#0" expanded="false" />
-            <element signature="e#4028#4599#0" expanded="false" />
-            <element signature="e#4141#4171#0" expanded="false" />
-            <element signature="e#4191#4473#0" expanded="false" />
-            <element signature="e#4494#4534#0" expanded="false" />
-            <element signature="e#4559#4593#0" expanded="false" />
-            <element signature="e#4612#4654#0" expanded="false" />
-            <element signature="e#4814#4856#0" expanded="false" />
-            <element signature="e#5054#5083#0" expanded="false" />
-            <element signature="e#5100#5159#0" expanded="false" />
-            <element signature="e#5176#5235#0" expanded="false" />
-            <element signature="e#5252#5311#0" expanded="false" />
-            <element signature="e#5333#5426#0" expanded="false" />
-            <element signature="e#5736#5754#0" expanded="false" />
-            <element signature="e#5764#5799#0" expanded="false" />
-            <element signature="e#5807#5847#0" expanded="false" />
-            <element signature="e#5863#5894#0" expanded="false" />
-            <element signature="e#5906#5954#0" expanded="false" />
-            <element signature="e#5969#6003#0" expanded="false" />
-            <element signature="e#6012#6047#0" expanded="false" />
-            <element signature="e#6059#6094#0" expanded="false" />
-            <element signature="e#6108#6137#0" expanded="false" />
-            <element signature="e#6151#6170#0" expanded="false" />
-            <element signature="e#6183#6200#0" expanded="false" />
-            <element signature="e#6250#6348#0" expanded="false" />
-            <element signature="e#6364#6389#0" expanded="false" />
-            <element signature="e#6412#6441#0" expanded="false" />
-            <element signature="e#6452#6481#0" expanded="false" />
-            <element signature="e#6731#6766#0" expanded="false" />
-            <element signature="e#6777#6830#0" expanded="false" />
-            <element signature="e#6848#6876#0" expanded="false" />
-            <element signature="e#6889#6915#0" expanded="false" />
-            <element signature="e#6964#7005#0" expanded="false" />
-            <element signature="e#7021#7078#0" expanded="false" />
-            <element signature="e#7175#7234#0" expanded="false" />
-            <element signature="e#7245#7463#0" expanded="false" />
-            <element signature="e#7334#7457#0" expanded="false" />
-            <element signature="e#7407#7449#0" expanded="false" />
-            <element signature="e#7477#7518#0" expanded="false" />
-            <element signature="e#7542#7732#0" expanded="false" />
-            <element signature="e#7653#7686#0" expanded="false" />
-            <element signature="e#7698#7726#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
@@ -949,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1248">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
@@ -967,6 +898,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.4" vertical-offset="139" max-vertical-offset="800">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -989,6 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="96">
           <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,14 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/javascript/app.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.111111" vertical-offset="0" max-vertical-offset="288">
-          <caret line="12" column="359" selection-start-line="12" selection-start-column="359" selection-end-line="12" selection-end-column="359" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/controller/HistoryItemController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="848">
@@ -1130,8 +1055,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25486726" vertical-offset="528" max-vertical-offset="1248">
-          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+        <state vertical-scroll-proportion="-43.52" vertical-offset="0" max-vertical-offset="1248">
+          <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/javascript/app.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.148148" vertical-offset="0" max-vertical-offset="288">
+          <caret line="7" column="2306" selection-start-line="7" selection-start-column="2306" selection-end-line="7" selection-end-column="2306" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/guitarhistory/animation/HistoryAnimationItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="3888">
+          <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-81.51923" vertical-offset="721" max-vertical-offset="8624">
+          <caret line="310" column="7" selection-start-line="310" selection-start-column="7" selection-end-line="310" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38754326" vertical-offset="48" max-vertical-offset="1280">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding />
         </state>
       </provider>

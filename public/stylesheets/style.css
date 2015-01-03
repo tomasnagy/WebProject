@@ -12,15 +12,15 @@ body {
   z-index: -1200; }
 
 button {
-  width: 15%;
-  padding: 1%;
-  font-size: 2.5vw;
-  color: #fff;
   background: none;
+  border: 0;
   border-radius: 5px;
+  color: #fff;
+  float: right;
   font-family: Tangerine;
-  border: none;
-  float: right; }
+  font-size: 2.5vw;
+  padding: 1%;
+  width: 15%; }
   button:focus {
     outline: 0; }
   button:hover {
@@ -29,215 +29,217 @@ button {
 header {
   padding: 2%; }
   header > h1 {
-    text-align: center;
+    color: #fff;
     font-family: Tangerine;
     font-size: 5vw;
     margin: 0;
-    color: white; }
+    text-align: center; }
 
 section {
   background-color: #fff;
   border-radius: 6px;
-  opacity: 0;
-  position: absolute;
-  padding: 3%;
-  width: 30%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   left: 3%;
-  overflow: hidden; }
+  opacity: 0;
+  overflow: hidden;
+  padding: 3%;
+  position: absolute;
+  width: 30%; }
   section:nth-child(odd) {
-    right: 3%;
-    left: auto; }
+    left: auto;
+    right: 3%; }
   section:nth-child(17) > img {
-    transform: none;
-    margin: 5% auto; }
+    margin: 5% auto;
+    transform: none; }
   section:nth-child(18) > img {
     width: 40%; }
   section:nth-child(20) > img, section:nth-child(19) > img {
-    width: 75%;
     margin: 4% auto;
-    transform: none; }
-  section > h2, section h3 {
+    transform: none;
+    width: 75%; }
+  section > h2,
+  section > h3 {
     font-weight: normal;
-    text-align: center;
+    margin: 0;
     opacity: 0;
-    white-space: nowrap;
-    margin: 0; }
+    text-align: center;
+    white-space: nowrap; }
   section > h2 {
     font-size: 4vw; }
   section > h3 {
     font-size: 3vw; }
   section > img {
     margin: 0 auto;
-    width: 35%;
     opacity: 0;
+    transform: rotate(45deg);
     user-select: none;
-    transform: rotate(45deg); }
+    width: 35%; }
   section > p {
     font-size: 1.2vw; }
 
-h2, h3 {
+h2,
+h3 {
   font-family: Tangerine; }
 
-div#data-container {
+#data-container {
+  clear: both;
   height: 100%;
   margin: 0;
   padding: 0;
-  clear: both;
   position: relative;
   width: 100%;
   z-index: -1000; }
-  div#data-container > img {
-    width: 100%;
-    user-select: none; }
-  div#data-container > inlay {
+  #data-container > img {
+    user-select: none;
+    width: 100%; }
+  #data-container > inlay {
+    color: #c0c0c0;
+    cursor: pointer;
+    display: block;
+    font-size: 3vw;
+    left: 44.3%;
     position: absolute;
     text-align: center;
-    display: block;
     top: 20.8%;
-    left: 44.3%;
-    width: 10%;
-    font-size: 3vw;
-    color: #c0c0c0;
     transition: color .2s;
-    cursor: pointer;
-    user-select: none; }
-    div#data-container > inlay.active {
+    user-select: none;
+    width: 10%; }
+    #data-container > inlay.active {
       color: #000; }
-    div#data-container > inlay:nth-child(3) {
+    #data-container > inlay:nth-child(3) {
       top: 32.4%; }
-    div#data-container > inlay:nth-child(4) {
+    #data-container > inlay:nth-child(4) {
       top: 43.15%; }
-    div#data-container > inlay:nth-child(5) {
-      top: 51.85%;
-      font-size: 2.8vw; }
-    div#data-container > inlay:nth-child(6) {
-      top: 58.65%;
-      font-size: 2.5vw; }
-    div#data-container > inlay:nth-child(7) {
-      top: 67%;
+    #data-container > inlay:nth-child(5) {
+      font-size: 2.8vw;
+      top: 51.85%; }
+    #data-container > inlay:nth-child(6) {
+      font-size: 2.5vw;
+      top: 58.65%; }
+    #data-container > inlay:nth-child(7) {
+      font-size: 2.5vw;
       left: 44.6%;
-      font-size: 2.5vw; }
-    div#data-container > inlay:nth-child(8) {
-      top: 74.1%;
+      top: 67%; }
+    #data-container > inlay:nth-child(8) {
+      font-size: 2vw;
       left: 45%;
-      font-size: 2vw; }
-    div#data-container > inlay:nth-child(9) {
-      top: 78.5%;
+      top: 74.1%; }
+    #data-container > inlay:nth-child(9) {
+      font-size: 2vw;
       left: 45%;
-      font-size: 2vw; }
-    div#data-container > inlay:nth-child(10) {
-      top: 82.95%;
+      top: 78.5%; }
+    #data-container > inlay:nth-child(10) {
+      font-size: 2vw;
       left: 45%;
-      font-size: 2vw; }
-    div#data-container > inlay:nth-child(11) {
-      top: 87.35%;
+      top: 82.95%; }
+    #data-container > inlay:nth-child(11) {
+      font-size: 2vw;
       left: 45%;
-      font-size: 2vw; }
-    div#data-container > inlay:hover {
+      top: 87.35%; }
+    #data-container > inlay:hover {
       color: #000; }
 
-div#stage-container {
-  z-index: -1001;
-  position: relative;
-  width: 100%;
+#stage-container {
   margin-top: -5%;
   overflow: hidden;
-  user-select: none; }
-  div#stage-container > p {
-    font-size: 2vw;
-    color: #fff;
-    position: absolute;
+  position: relative;
+  user-select: none;
+  width: 100%;
+  z-index: -1001; }
+  #stage-container > p {
     bottom: 1%;
-    width: 32%;
+    color: #fff;
+    font-family: Tangerine;
+    font-size: 2vw;
     left: 34%;
-    font-family: Tangerine; }
-  div#stage-container > div {
-    z-index: 100;
-    width: 100%;
+    position: absolute;
+    width: 32%; }
+  #stage-container > div {
+    left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
-    overflow: hidden; }
-    div#stage-container > div > figure.support-guitar {
-      margin: 35% 13% 0 0;
-      width: 15%;
+    width: 100%;
+    z-index: 100; }
+    #stage-container > div > .support-guitar {
       float: left;
-      transform: rotate(45deg); }
-      div#stage-container > div > figure.support-guitar > img {
+      margin: 35% 13% 0 0;
+      transform: rotate(45deg);
+      width: 15%; }
+      #stage-container > div > .support-guitar > img {
         width: 100%; }
-      div#stage-container > div > figure.support-guitar > figcaption {
-        position: absolute;
-        transform: rotate(-90deg);
+      #stage-container > div > .support-guitar > figcaption {
+        color: #c0c0c0;
+        font-size: .8vw;
         left: -7%;
-        top: 38%;
         margin: 0;
-        width: 100%;
+        padding: 0;
+        position: absolute;
         text-align: center;
         text-transform: uppercase;
-        padding: 0;
-        font-size: 0.8vw;
-        color: #c0c0c0; }
-      div#stage-container > div > figure.support-guitar:first-child {
+        top: 38%;
+        transform: rotate(-90deg);
+        width: 100%; }
+      #stage-container > div > .support-guitar:first-child {
         margin: 35% 14% 0 15%; }
-      div#stage-container > div > figure.support-guitar:nth-child(even) {
+      #stage-container > div > .support-guitar:nth-child(even) {
         margin-top: 25%; }
-  div#stage-container > img {
-    width: 100%;
-    display: block; }
-  div#stage-container > figure {
-    z-index: 101;
-    width: 30%;
+  #stage-container > img {
+    display: block;
+    width: 100%; }
+  #stage-container > figure {
     height: auto;
-    position: absolute;
     left: 40%;
+    position: absolute;
     top: 44%;
-    transform: rotate(70deg); }
-    div#stage-container > figure > img {
+    transform: rotate(70deg);
+    width: 30%;
+    z-index: 101; }
+    #stage-container > figure > img {
       width: 100%; }
-    div#stage-container > figure > div {
+    #stage-container > figure > div {
+      background-color: #f00;
+      cursor: pointer;
+      height: 6%;
+      left: 40.5%;
+      opacity: .5;
       position: absolute;
       top: 22%;
-      cursor: pointer;
-      left: 40.5%;
-      width: 5%;
-      height: 6%;
-      opacity: .5;
-      background-color: #f00; }
-      div#stage-container > figure > div.playing {
+      width: 5%; }
+      #stage-container > figure > div.playing {
         opacity: 1; }
-      div#stage-container > figure > div#chord2 {
-        top: 30%;
-        background-color: #0f0; }
-      div#stage-container > figure > div#chord3 {
-        top: 38%;
-        background-color: #00f; }
-      div#stage-container > figure > div#chord4 {
-        top: 46%;
-        background-color: #ff0; }
-  div#stage-container > button {
-    position: absolute;
-    top: 20%;
-    right: 0;
+      #stage-container > figure > div#chord2 {
+        background-color: #0f0;
+        top: 30%; }
+      #stage-container > figure > div#chord3 {
+        background-color: #00f;
+        top: 38%; }
+      #stage-container > figure > div#chord4 {
+        background-color: #ff0;
+        top: 46%; }
+  #stage-container > button {
     float: none;
+    position: absolute;
+    right: 0;
+    top: 20%;
     z-index: 1000; }
 
-div#locationloader {
-  position: absolute;
-  margin-top: 35%;
-  height: 20%;
-  width: 100%;
+#locationloader {
   color: #fff;
-  padding: 0; }
-  div#locationloader > * {
-    margin: 0 auto;
-    text-align: center;
+  height: 20%;
+  margin-top: 35%;
+  padding: 0;
+  position: absolute;
+  width: 100%; }
+  #locationloader > * {
+    font-family: Tangerine;
     font-size: 2vw;
-    font-family: Tangerine; }
-  div#locationloader > img {
+    margin: 0 auto;
+    text-align: center; }
+  #locationloader > img {
     display: block;
-    width: 2%;
-    margin: 1% auto; }
+    margin: 1% auto;
+    width: 2%; }
 
 .active {
   color: #000; }
@@ -250,14 +252,14 @@ div#locationloader {
   opacity: 1;
   visibility: visible; }
 
-.peekOpenItem {
-  width: 30%;
-  opacity: 1; }
-
-.openItem {
-  width: 30%;
+.peek-open-item {
   opacity: 1;
-  height: 420px; }
+  width: 30%; }
+
+.open-item {
+  height: 420px;
+  opacity: 1;
+  width: 30%; }
 
 .fullyhidden {
   display: none;
@@ -271,23 +273,23 @@ div#locationloader {
   display: block;
   opacity: 1; }
 
-.closedItem {
-  width: 0;
-  opacity: 0; }
+.closed-item {
+  opacity: 0;
+  width: 0; }
 
-.opaqueItem {
-  opacity: 0.2; }
+.opaque-item {
+  opacity: .2; }
 
 .invisible {
   opacity: 0; }
 
 @media screen and (max-width: 800px) {
   button {
-    font-size: 5vw;
-    width: 20%;
-    float: none;
     display: block;
-    margin: 0 auto; }
+    float: none;
+    font-size: 5vw;
+    margin: 0 auto;
+    width: 20%; }
 
   header > h1 {
     font-size: 7vw; }
@@ -299,62 +301,65 @@ div#locationloader {
   section > p {
     font-size: 2.5vw; }
 
-  div#data-container > section {
-    position: relative;
-    top: auto;
+  #data-container > section {
     left: auto;
-    right: auto;
-    margin: 0 auto 4% auto;
+    margin: 0 auto 4%;
     opacity: 1;
+    position: relative;
+    right: auto;
+    top: auto;
     width: 80%; }
-    div#data-container > section:last-child {
+    #data-container > section:last-child {
       margin-bottom: 0; }
-    div#data-container > section > * {
+    #data-container > section > * {
       display: block;
       opacity: 1; }
-  div#data-container > img {
+  #data-container > img {
     display: none; }
-  div#data-container > inlay {
+  #data-container > inlay {
     display: none; }
 
-  .hidden, .fullyhidden, .block, .fullshow {
+  .hidden,
+  .fullyhidden,
+  .block,
+  .fullshow {
     display: block;
     opacity: 1; }
 
-  .closedItem {
-    width: 90%;
+  .closed-item {
     display: block;
-    opacity: 1; }
+    opacity: 1;
+    width: 90%; }
 
-  div#stage-container {
+  #stage-container {
     margin-top: -5%; }
-    div#stage-container > p {
+    #stage-container > p {
       display: none; }
-    div#stage-container > figure {
-      width: 83%;
+    #stage-container > figure {
       left: 10%;
-      top: -37%; }
-    div#stage-container > div {
-      top: 5%;
+      top: -37%;
+      width: 83%; }
+    #stage-container > div {
       left: 30%;
-      padding-left: 17%; }
-      div#stage-container > div > figure.support-guitar {
+      padding-left: 17%;
+      top: 5%; }
+      #stage-container > div > .support-guitar {
         margin: 25% -5% 0 0;
         width: 21%; }
-        div#stage-container > div > figure.support-guitar:first-child {
+        #stage-container > div > .support-guitar:first-child {
           margin: 25% -5% 0 0; }
-    div#stage-container > button {
+    #stage-container > button {
       right: 40%;
       top: 10%; }
-    div#stage-container > #locationloader {
-      top: 0;
+    #stage-container > #locationloader {
       left: 0;
-      overflow: visible;
       margin-top: 20%;
-      padding-left: 0; }
-      div#stage-container > #locationloader > * {
+      overflow: visible;
+      padding-left: 0;
+      top: 0; }
+      #stage-container > #locationloader > * {
         font-size: 4vw; }
-      div#stage-container > #locationloader > img {
+      #stage-container > #locationloader > img {
         width: 5%; } }
 
 /*# sourceMappingURL=style.css.map */

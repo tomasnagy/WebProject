@@ -66,11 +66,11 @@ HistoryAnimationItem.prototype = {
         }
 
         // hideMainItem
-        this.guitarItem.className = 'closedItem';
+        this.guitarItem.className = 'closed-item';
 
         // create animations
         this.tl1
-            .to(this.guitarItem, 0.4, {className: 'peekOpenItem'})
+            .to(this.guitarItem, 0.4, {className: 'peek-open-item'})
             .to(this.mainData, 0.2, {className: 'show'});
 
         this.tl2
@@ -82,9 +82,9 @@ HistoryAnimationItem.prototype = {
             .to(this.extraData, 0.2, {className: 'hidden'})
             .to(this.extraData, 0, {className: 'fullyhidden'})
             .to(this.guitarItem, 0.2, {height: this.smallHeight})
-            .to(this.guitarItem, 0, {className: 'peekOpenItem'})
+            .to(this.guitarItem, 0, {className: 'peek-open-item'})
             .to(this.mainData, 0.2, {className: 'hidden'})
-            .to(this.guitarItem, 0.5, {className: 'closedItem'});
+            .to(this.guitarItem, 0.5, {className: 'closed-item'});
 
         this.tl4
             .to([this.mainData, this.extraData], 0.1, {className: 'hidden'})
@@ -92,7 +92,7 @@ HistoryAnimationItem.prototype = {
             .to(this.extraData, 0, {className: 'fullyhidden'})
             .to(this.guitarItem,  0, {height: this.smallHeight});
 
-        this.tl5.to(this.guitarItem, 0.4, {className: '+=opaqueItem'});
+        this.tl5.to(this.guitarItem, 0.4, {className: '+=opaque-item'});
 
         // only add events initially
         if(this.isFirstTime) {
