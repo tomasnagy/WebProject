@@ -5,7 +5,8 @@ var express = require('express'),
     router = express.Router();
 
 router.get('/inlay', function(req, res) {
-  res.render('directives/inlay');
+    'use strict';
+    res.render('directives/inlay');
 });
 
 module.exports = router;

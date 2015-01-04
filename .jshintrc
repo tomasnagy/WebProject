@@ -1,0 +1,33 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "globals": {
+    "module": true,
+    "require": true,
+    "console": true,
+    "process": true,
+    "__dirname": true,
+    "document": true,
+    "createjs": true,
+    "setTimeout": true,
+    "window": true,
+    "smoothScroll": true,
+    "navigator": true,
+    "CustomEvent": true,
+    "TimelineLite": true,
+    "TweenLite": true,
+    "google": true,
+    "HistoryAnimationItem": true,
+    "localStorage": true,
+    "angular": true,
+    "startAnimations": true,
+    "GuitarPlayerItem": true,
+    "clearTimeout": true,
+    "getLocation": true,
+    "io": true,
+    "GuitarHistoryItem": true,
+    "guitarPlayerController": true,
+    "TweenMax": true
+  }
+}

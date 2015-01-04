@@ -66,6 +66,7 @@ function guitarPlayerController(isServerDown) {
 
 
 function loadGuitar(socket, user, roomName) {
+    'use strict';
     var guitarItem = new GuitarPlayerItem(user.guitar, false),
         chord1 = document.getElementById('chord1'),
         chord2 = document.getElementById('chord2'),
@@ -223,12 +224,14 @@ function loadGuitar(socket, user, roomName) {
 }
 
 function showBackgroundGuitars(users, currentUser) {
+    'use strict';
     var i = users.length - 1,
         htmlBuilder = '',
         supportGuitar = '',
         item,
         supportGuitarContainer = document.getElementById('support-guitars'),
         formatLocation = function(location) {
+            // set a max length on string so it doesn't exceed it's bounds
             var result = '';
             if(location.length > 17) {
                 result = location.substring(0, 17);
@@ -260,6 +263,7 @@ function showBackgroundGuitars(users, currentUser) {
 }
 
 function loadSupportGuitarsSound(currentGuitar) {
+    'use strict';
     var supportguitars = ['cheap', 'heartBroken', 'practiceSpace', 'woollyOctave'],
         i = supportguitars.length - 1,
         item,
@@ -303,6 +307,7 @@ function playChordFromSupportGuitar(user, chord, supportguitars) {
 }
 
 function shakeRightGuitar(name) {
+    'use strict';
     var guitarToShake = document.getElementById(name),
         count = 0,
         shakeTween = function(item){

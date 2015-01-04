@@ -29,8 +29,9 @@ function startAnimations(data) {
     // resize stop
     function stoppedResizing() {
         var j = items.length - 1;
+
         for(j; j >= 0; j--) {
-            // recalculate animations
+            // reset + recalculate animations
             items[j].reset();
             console.log('RESET');
             items[j].calculateAnimations();
@@ -43,6 +44,7 @@ function startAnimations(data) {
 
         if(!resizeStarted) {
             var j = items.length - 1;
+
             for (j; j >= 0; j--) {
                 var item = items[j];
 
@@ -51,11 +53,12 @@ function startAnimations(data) {
                     items[j].closeItem();
                 }
             }
+
             resizeStarted = true;
         }
     });
 
-    // close all open sections on click
+    // close all open sections on click on both containers
     backgroundImage.addEventListener('click', function(e) {
         if(e.target === this) {
             e.target.dispatchEvent(event);

@@ -1,7 +1,6 @@
 /**
  * Created by tomasnagy on 01/12/14.
  */
-'use strict';
 var mongoose = require('mongoose'),
     ItemScheme = new mongoose.Schema({
         title:{type: String},

@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 
 // Clean build folder
 gulp.task('clean', function(cb) {
-    del(['public/build'], cb)
+    del(['public/build'], cb);
 });
 
 // Compile sass, auto prefix & minify css

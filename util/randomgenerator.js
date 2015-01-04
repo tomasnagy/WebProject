@@ -3,6 +3,7 @@
  */
 
 module.exports = (function() {
+    'use strict';
     var getRandomID = function(length, callback) {
         var result = '',
             pool = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",

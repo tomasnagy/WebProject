@@ -2,6 +2,7 @@
  * Created by tomasnagy on 01/12/14.
  */
 var GuitarHistoryItem = function(title, date, description, image, interactiveGuitarName) {
+    'use strict';
     this.title = title;
     this.date = date;
     this.year = date.split(' ')[date.split(' ').length - 1];

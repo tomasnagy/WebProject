@@ -2,6 +2,7 @@
  * Created by tomasnagy on 11/12/14.
  */
 module.exports = function(server) {
+    'use strict';
     var io = require('socket.io')({
             'transports': ['websockets', 'xhr-polling']
         }).listen(server),
@@ -80,7 +81,6 @@ module.exports = function(server) {
 
         socket.on('disconnect', function() {
             if(socket.room !== undefined && socket.room !== null) {
-
                 var indexOfRoom = rooms.map(function(e) {
                     return e.Name;
                 }).indexOf(socket.room);

@@ -25,6 +25,7 @@ var HistoryAnimationItem = function(index, data) {
 HistoryAnimationItem.prototype = {
     get IsOpen() { return this.isOpen; },
     loadImages: function() {
+        'use strict';
         var self = this;
 
         self.guitarItem.children[2].src = self.data[self.index].Image;
@@ -35,6 +36,7 @@ HistoryAnimationItem.prototype = {
         }, false);
     },
     calculateAnimations: function() {
+        'use strict';
         var self = this,
             windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
@@ -102,6 +104,7 @@ HistoryAnimationItem.prototype = {
 
     },
     addEvents: function() {
+        'use strict';
         var self = this,
             closeItemsEvent = new CustomEvent(
                 "closeItems",
@@ -195,24 +198,23 @@ HistoryAnimationItem.prototype = {
 
     },
     closeItem: function() {
-        console.log('CLOSE');
+        'use strict';
         this.isOpen = false;
         this.tl4.play(0);
     },
     reset: function() {
+        'use strict';
         var i = this.guitarItem.children.length - 1,
             currentItem;
 
+        // reset timeline objects
         this.tl1 = new TimelineLite({paused: 'true'});
         this.tl2 = new TimelineLite({paused: 'true'});
         this.tl3 = new TimelineLite({paused: 'true'});
         this.tl4 = new TimelineLite({paused: 'true'});
         this.tl5 = new TimelineLite({paused: 'true'});
 
-        this.fullHeight = 0;
-        this.smallHeight = 0;
-
-        // remove class & styles
+       // remove class & styles
         this.guitarItem.removeAttribute('class');
         this.guitarItem.removeAttribute('style');
 
@@ -230,6 +232,8 @@ HistoryAnimationItem.prototype = {
         }
 
         // reset necessary animation data
+        this.fullHeight = 0;
+        this.smallHeight = 0;
         this.i = this.mainData.length - 1;
         this.j = this.extraData.length - 1;
         this.isOpen = false;

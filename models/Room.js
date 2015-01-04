@@ -14,6 +14,7 @@ Room.prototype =  {
     get Users() { return this.users; },
 
     getUserById: function(id) {
+        'use strict';
         var i = this.users.length - 1,
             user;
 
@@ -28,6 +29,7 @@ Room.prototype =  {
     },
 
     addUser: function(user) {
+        'use strict';
         if(this.users.length < 4) {
             this.users.push(user);
             this.grantGuitarToUser(user);
@@ -38,6 +40,7 @@ Room.prototype =  {
     },
 
     removeUser: function(user) {
+        'use strict';
         // re-add guitar to available guitars
         this.availableGuitars.push(user.guitar);
 
@@ -47,6 +50,7 @@ Room.prototype =  {
     },
 
     grantGuitarToUser: function(user) {
+        'use strict';
         // grant guitar to user
         user.Guitar = this.availableGuitars[0];
 

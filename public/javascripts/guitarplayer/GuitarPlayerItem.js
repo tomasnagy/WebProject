@@ -63,6 +63,7 @@ GuitarPlayerItem.prototype = {
     get Chord4() { return this.selectedGuitar + 'Chord4'; },
 
     playChord1: function() {
+        'use strict';
         this.stopAllChords();
         if (this.chord1 === undefined) {
             this.chord1 = createjs.Sound.play(this.selectedGuitar + 'Chord1');
@@ -77,6 +78,7 @@ GuitarPlayerItem.prototype = {
         }
     },
     playChord2: function() {
+        'use strict';
         this.stopAllChords();
         if (this.chord2 === undefined) {
             this.chord2 = createjs.Sound.play(this.selectedGuitar + 'Chord2');
@@ -91,6 +93,7 @@ GuitarPlayerItem.prototype = {
         }
     },
     playChord3: function() {
+        'use strict';
         this.stopAllChords();
         if (this.chord3 === undefined) {
             this.chord3 = createjs.Sound.play(this.selectedGuitar + 'Chord3');
@@ -105,6 +108,7 @@ GuitarPlayerItem.prototype = {
         }
     },
     playChord4: function() {
+        'use strict';
         this.stopAllChords();
         if (this.chord4 === undefined) {
             this.chord4 = createjs.Sound.play(this.selectedGuitar + 'Chord4');
@@ -119,6 +123,7 @@ GuitarPlayerItem.prototype = {
         }
     },
     stopAllChords: function() {
+        'use strict';
         if(this.chord1 !== undefined) {
             this.chord1.stop();
         }

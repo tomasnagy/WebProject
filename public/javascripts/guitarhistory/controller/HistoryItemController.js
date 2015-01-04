@@ -4,17 +4,8 @@
 (function() {
     'use strict';
     var HistoryItemController = function($scope, $http, $timeout) {
-        var isServerDown = false;
-        $scope.items = [];
-
-        $scope.layoutDone = function() {
-            $timeout(function() {
-                startAnimations($scope.items);
-                guitarPlayerController(isServerDown);
-            }, 0);
-        };
-
-        var onDataDownloaded = function(res) {
+        var isServerDown = false,
+            onDataDownloaded = function(res) {
                 // save data to localstorage for offline use
                 localStorage.setItem('guitarHistoryData', JSON.stringify(res));
 
@@ -39,9 +30,17 @@
                 }
             };
 
+        $scope.items = [];
+
+        $scope.layoutDone = function() {
+            $timeout(function() {
+                startAnimations($scope.items);
+                guitarPlayerController(isServerDown);
+            }, 0);
+        };
+
+
         $http.get(window.location.protocol + '//' + window.location.host + '/api/allData').then(onDataDownloaded, onError);
-
-
     };
     var app = angular.module('app');
     app.controller('HistoryItemController', ['$scope', '$http', '$timeout',  HistoryItemController]);

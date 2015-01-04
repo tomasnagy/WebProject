@@ -1,8 +1,8 @@
 /**
  * Created by tomasnagy on 30/11/14.
  */
-'use strict';
 module.exports = (function() {
+    'use strict';
     var mongoose = require('mongoose'),
         mongodbURL = process.env.CUSTOMCONNSTR_MONGOLAB_URI,
         db;
