@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     stripdebug = require('gulp-strip-debug'),
-    scsslint = require('gulp-scss-lint');
+    scsslint = require('gulp-scss-lint'),
+    mongobackup = require('mongobackup');
 
 // Clean build folder
 gulp.task('clean', function(cb) {
@@ -74,4 +75,13 @@ gulp.task('Watcher', function() {
 
     gulp.watch(['public/build/**']).on('change', livereload.changed);
 
+});
+
+// Restore mongodb
+gulp.task('mongorestore', function() {
+    mongobackup.restore({
+        host: 'localhost',
+        drop: true,
+        path: './database/guitarHistory'
+    });
 });
